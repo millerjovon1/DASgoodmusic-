@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: {
     index: './src/index.js',
-    // home: './src/home/home.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -19,10 +18,9 @@ module.exports = {
       chunks: ['index'],
       filename: 'index.html',
     }),
-
     new HtmlWebpackPlugin({
-      template: './src/home/home.html',
-      chunks: ['home'],
+      template: './src/home.html', // Updated path to home.html
+      chunks: ['index'], // Assuming you want to include the same chunks as the index
       filename: 'home.html',
     }),
     new MiniCssExtractPlugin({
@@ -40,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',  // Use 'asset/resource' for file-loader behavior
+        type: 'asset/resource',
       },
     ],
   },
