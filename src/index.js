@@ -1,3 +1,5 @@
+import './style.css';
+
 import _ from 'lodash-es';
 
 function component() {

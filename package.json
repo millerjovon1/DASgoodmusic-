@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/millerjovon1/DASgoodmusic-#readme",
   "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
     "husky": "^8.0.3",
     "mini-css-extract-plugin": "^2.7.6",
