@@ -19,8 +19,8 @@ module.exports = {
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/home.html', // Updated path to home.html
-      chunks: ['index'], // Assuming you want to include the same chunks as the index
+      template: './src/home.html',
+      chunks: ['index'], // Use 'index' chunk for home.html
       filename: 'home.html',
     }),
     new MiniCssExtractPlugin({

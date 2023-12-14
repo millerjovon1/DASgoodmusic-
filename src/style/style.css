@@ -1,2 +1,4 @@
 @import './pages/index.css';
 @import './pages/home.css';
+@import './variables.css';
+@import './components/index.css'
