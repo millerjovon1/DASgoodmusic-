@@ -16,7 +16,6 @@ body, html {
   box-sizing: border-box;
   background-color: var( --main-color);
 
-  padding: 20px; /* Adjust the padding value to your preference */
 
 }
 /* ==header(Banner)== */
@@ -37,7 +36,7 @@ header {
 }
 
 #nav  {
-  width: 32%;
+  width: 30%;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -47,12 +46,12 @@ header {
 
 #nav li {
   display: inline-block;
-  margin-right: 3%; /* Adjust the margin as needed */
+  margin-right: 2%; /* Adjust the margin as needed */
 }
 
 #header-logo {
-  width: 60%;
-  padding: 5% 5%;
+  width: 50%;
+  padding: 5% 8%;
 }
 .header-text {
   padding: 0 10%;
@@ -91,5 +90,8 @@ header {
 
 /* ==home-about== */
 #home-about{
+  background-color: var(--secondary-color);
+  width: 100%;
+  margin-top: 2%;
 
 }
