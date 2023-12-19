@@ -121,11 +121,11 @@ header {
   }
 
   #stereofox-logo {
-    width:240px;
+    width:220px;
   }
 
   #chill-select-logo{
-    width: 120px;
+    width: 68px;
   }
 }
 
@@ -146,18 +146,23 @@ header {
   font-weight: 600;
   font-size: 32px;
 }
-.c-a-logo{
+
+.c-a-logo ul{
+  text-align: center;
+  margin: 2%;
+
+
+}
+.c-a-logo li {
   list-style-type: none;
-
-  ul{
-    width:40px;
-  }
-
-  li {
-    display: inline-block;
-
-  }
-
-
-
+  display: inline-block;
+}
+#otoco-logo{
+  width: 380px;
+}
+#jsb-logo{
+  width: 200px;
+}
+#d-league-logo{
+  width: 355px;
 }
