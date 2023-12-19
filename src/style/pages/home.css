@@ -96,7 +96,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 
 
@@ -110,12 +110,12 @@ header {
 }
 
 .music-pub-logo {
-  width: 40%;
+  width: 20%;
   padding:1%;
 
 
   #rsm-logo {
-    width: 600px;
+    width: 300px;
     background-color: red;
 
   }
@@ -149,13 +149,13 @@ header {
 
 .c-a-logo ul{
   text-align: center;
-  margin: 2%;
 
 
 }
 .c-a-logo li {
   list-style-type: none;
   display: inline-block;
+  margin-right: 2%;
 }
 #otoco-logo{
   width: 380px;
