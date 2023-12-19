@@ -1,6 +1,7 @@
 /* ==fonts== */
 @import url('https://fonts.cdnfonts.com/css/royal-acidbath');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&family=Open+Sans:wght@300&display=swap');
 
 /* main-layout */
 
@@ -14,7 +15,7 @@ body, html {
 .home{
   margin: 0;
   box-sizing: border-box;
-  background-color: var( --main-color);
+  background-color: black;
 
 
 }
@@ -23,6 +24,7 @@ body, html {
 header {
   width: 100%;
   text-align: left;
+  background-color: var( --main-color) ;
   /* margin: 0 auto 4%; */
   /* padding: 4%; */
 
@@ -92,6 +94,70 @@ header {
 #home-about{
   background-color: var(--secondary-color);
   width: 100%;
-  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+
+
+}
+#home-about-text {
+  text-align: left;
+  width: 40%;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.music-pub-logo {
+  width: 40%;
+  padding:1%;
+
+
+  #rsm-logo {
+    width: 600px;
+    background-color: red;
+
+  }
+
+  #stereofox-logo {
+    width:240px;
+  }
+
+  #chill-select-logo{
+    width: 120px;
+  }
+}
+
+/* ==clients - affiliates== */
+
+#clients-affiliates{
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: 'Big Shoulders Display', sans-serif;
+  margin: 0%;
+  padding: 0%;
+}
+
+.c-a-heading h1{
+  text-align: center;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+}
+.c-a-logo{
+  list-style-type: none;
+
+  ul{
+    width:40px;
+  }
+
+  li {
+    display: inline-block;
+
+  }
+
+
 
 }
