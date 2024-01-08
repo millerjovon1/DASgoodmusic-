@@ -15,7 +15,7 @@ body, html {
 .home{
   margin: 0;
   box-sizing: border-box;
-  background-color: black;
+  background-color:var(--secondary-color);
 
 
 }
@@ -23,48 +23,71 @@ body, html {
 
 header {
   width: 100%;
-  text-align: left;
+  height: 520px;
+  /* text-align: left; */
   background-color: var( --main-color) ;
+  position: relative;
+
   /* margin: 0 auto 4%; */
   /* padding: 4%; */
 
 }
-#header-nav {
-  font-family: 'Big Shoulders Display', sans-serif;
+/* #header-nav {
+  width: 100%;
 
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* list-style-type: none;
+  text-align: center; */
+  /* position: relative; */
+/* } */
 
 #nav  {
-  width: 30%;
+  font-family: 'Big Shoulders Display', sans-serif;
+
   list-style-type: none;
   margin: 0;
   padding: 0;
   font-size: 26px;
   font-weight: 200;
+  display:flex;
+  justify-content: space-between;
+
+  /* position: absolute; */
+  /* right: 2%; */
+
 }
 
 #nav li {
   display: inline-block;
-  margin-right: 2%; /* Adjust the margin as needed */
+ /* Adjust the margin as needed */
+  /* margin: 1%; */
+  padding: 2%;
 }
 
 #header-logo {
-  width: 50%;
-  padding: 5% 8%;
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  top:20%;
+  left:20%;
+  /* padding: 6% 12% 0; */
+
+  /* padding: 5% 8%; */
 }
 .header-text {
-  padding: 0 10%;
+  /* padding: 0 10%; */
   display:flex;
   flex-direction: column;
+  position: absolute;
+  bottom: 8%;
+  left:20% ;
 }
 #header-title {
   font-family: 'Royal Acidbath', sans-serif;
-  font-size:42px;
+  font-size:30px;
   color:white;
-  margin-top: -2%;
+  /* margin-top: -2%; */
 }
 #header-subtitle {
   font-family: 'Big Shoulders Display', sans-serif;
@@ -92,12 +115,12 @@ header {
 
 /* ==home-about== */
 #home-about{
-  background-color: var(--secondary-color);
   width: 100%;
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction:row;
+  justify-content: center;
+  border-bottom: 1px solid #333; /* 2px width, solid style, and #333 color */
 
 
 
@@ -105,27 +128,45 @@ header {
 #home-about-text {
   text-align: left;
   width: 40%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Big Shoulders Display', sans-serif;
+
+
+  h1 {
+    font-size: 160px;
+
+    color: var(--main-btn-color);
+  }
+
+  p{
+    position: absolute;
+    left: 16%;
+    bottom: 2%;
+    width: 30%;
+  }
 
 }
 
 .music-pub-logo {
-  width: 20%;
+  width: 30%;
   padding:1%;
 
 
   #rsm-logo {
-    width: 300px;
+    width: 400px;
     background-color: red;
 
   }
 
   #stereofox-logo {
-    width:220px;
+    width:400px;
   }
 
   #chill-select-logo{
-    width: 68px;
+    width: 160px;
+  }
+
+  #twib-logo{
+    width: 160px;
   }
 }
 
@@ -133,7 +174,7 @@ header {
 
 #clients-affiliates{
   width: 100%;
-  background-color: black;
+  background-color: #F5F5DC;
   color: white;
   font-family: 'Big Shoulders Display', sans-serif;
   margin: 0%;

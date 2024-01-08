@@ -11,8 +11,6 @@
 </head>
 <body class="home">
   <header id="header">
-    <span id="header-nav">
-      <img id="header-logo"src="images/dasgoodmusic_logo4.png" alt="dasgoodmusic_logo1">
       <ul id="nav">
         <li><i class="fa-solid fa-house"><a href="./home.html"></a></i></li>
         <li>DA$ Catalouge</li>
@@ -21,17 +19,17 @@
         <li>About</li>
         <li>Contact</li>
       </ul>
-    </span>
-    <div class="header-text">
-      <h1 id="header-title">The World's Most Sophisticated Music Brand</h1>
-      <h2 id="header-subtitle">Explore the DA$goodmusic catalogue, We welcome fans, artist, and music businesss</h2>
-      <button id="header-button"><p>Listen</p></button>
-    </div>
+      <img id="header-logo"src="images/dasgoodmusic_logo4.png" alt="dasgoodmusic_logo1">
+      <div class="header-text">
+        <h1 id="header-title">The World's Most Sophisticated Music Brand</h1>
+        <!-- <h2 id="header-subtitle">Explore the DA$goodmusic catalogue, We welcome fans, artist, and music businesss</h2> -->
+        <button id="header-button"><p>Listen to Catalogue</p></button>
+      </div>
   </header>
 
   <section id="home-about">
-    <h1>DASExperience</h1>
     <div id="home-about-text">
+      <h1>DASExperience</h1>
       <p>
         Making Waves in the Music Industry!<br>
         Our USA-based team is leading the global music scene with a bang.
@@ -42,9 +40,10 @@
       </p>
     </div>
     <div class="music-pub-logo">
-      <img id="rsm-logo" src="images/rollingstonemagazine_logo.png" alt="chill_select_logo">
+      <img id="rsm-logo" src="images/rollingstonemagazine_logo.png" alt="chill_select_logo"><br>
       <img id="stereofox-logo" src="images/stereofox_logo.png" alt="chill_select_logo">
       <img id="chill-select-logo" src="images/chill_select_logo.jpeg" alt="chill_select_logo">
+      <img id="twib-logo" src="images/wordisbondlogo.jpg" alt="wordisbondlogo">
     </div>
 
 
@@ -63,6 +62,37 @@
       </ul>
 
     </div>
+  </section>
+  <section id="home-labels-form">
+    <div id="home-form-text">
+      <p>
+        In the dynamic music industry, partnering with [Music Label Name] is a game-changer.
+        As label owners blending client management, web development, and tech-savvy expertise, we redefine success.
+        Our track record in international releases and artist development, personally and creatively, sets us apart.
+        Dream big with us, where understanding your potential is key to sustainable growth. At [Music Label Name],
+        success thrives on consistent, quality music and genuine relationships. Elevate your journey—choose [Music Label Name]
+        for a unique blend of artistry, tech innovation, and authentic connections, creating more opportunities for our clients.
+      </p>
+
+    </div>
+    <form action="/submit_message" method="post">
+      <!-- Text Input for Name -->
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Email Input -->
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Textarea for Message -->
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit">
+  </form>
+
+</body>
   </section>
 
   <!-- <h1>Hello World</h1> -->
