@@ -1,8 +1,11 @@
 /* ==colors== */
 :root {
-  --main-color:  #F49C76;
-  --secondary-color: #F5F5DC;
+  --main-color: #F5F5DC;
+
+  --secondary-color: #F49C76;
   --main-btn-color: #87CEEB;
+  --main-font-color:    #00564b;
+
 }
 
 
