@@ -15,8 +15,8 @@
       <ul class="home-button">
         <li>DA$ Catalogue</li>
         <li>DA$ Studios.jp🇯🇵</li>
+        <li>Label</li>
         <li>DA$ Beat-Store</li>
-        <li>DA$ Team</li>
         <li>DA$ Services</li>
         <li>Contact</li>
       </ul>
@@ -37,24 +37,25 @@
                 Although based in the U.S., we operate internationally with a presence in America, Tokyo, and Paris.</p>
                 <h3>Elevate Your Project: Choose DA$goomusic</h3>
               </div>
-          <div class="blue-btn">Explore Catalogue</div>
-        </div>
-        <div class="das-publications">
-          <h3>Featured In</h3>
-          <img class="rsm-logo" src="./images/rollingstonemagazine_logo.png" alt="rsm-logo">
-          <img class="twib-logo" src="./images/wordisbondlogo.jpg" alt="rsm-logo">
-          <img class="sf-logo" src="./images/stereofox_logo.png" alt="sf-logo">
-          <img class="cs-logo" src="./images/chill_select_logo.jpeg" alt="cs-logo">
-        </div>
+              <div class="blue-btn">Explore Catalogue</div>
+            </div>
+            <h3>Featured In</h3>
+            <div class="das-publications">
+              <img class="rsm-logo" src="./images/rollingstonemagazine_logo.png" alt="rsm-logo">
+              <img class="sf-logo" src="./images/stereofox_logo.png" alt="sf-logo">
+              <img class="twib-logo" src="./images/wordisbondlogo.jpg" alt="rsm-logo">
+              <img class="cs-logo" src="./images/chill_select_logo.jpeg" alt="cs-logo">
+            </div>
           </div>
         </div>
         <div class="client-list">
-          <h2>Partners</h2>
+          <h2>Clients - Partners</h2>
           <ul>
             <li><img id="otoco" src="./images/otoco_logo.jpeg" alt="otoco"></li>
             <li><img id="jsb" src="./images/jsb_logo.jpeg" alt="jsb"></li>
             <li><img id="d-league" src="./images/d_league_logo.jpeg" alt="d-league"></li>
           </ul>
+
           <div class="services-pill">
             <p class="pill">Music Production</p>
             <p class="pill">Sync Licencing</p>
@@ -62,7 +63,30 @@
             <p class="pill">Voice Narration</p>
             <p class="pill">Exlusive Releases</p>
         </div>
+        <div class="client-services-contact">
+          <form action="services-action">
 
+            <label for="company-name">Label Name/Company Name</label>
+            <input type="text" id="company-name" name="company-name" placeholder="Label Name/Company Name..">
+
+            <label for="services">Service</label>
+            <select id="service-home" name="service">
+              <option value="music-production">Music Production</option>
+              <option value="sync-licencing">Sync Licencing</option>
+              <option value="singing-Songwriting-Rapping">Singing-Songwriting-Rapping</option>
+              <option value="voice-narration">Voice Narration & Broadcasting</option>
+              <option value="exclusives">Exlusives Releases & Collaboration</option>
+              <option value="talent-scouting">A&R & Talent Scouting</option>
+
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+          </form>
+        </div>
         </div>
 
 

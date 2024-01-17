@@ -131,27 +131,29 @@ a:hover {
 
 }
 .das-publications{
-  width: 40%;
+  width: 30%;
   text-align: left;
+  height: 160px;
   border: 1px solid white;
+
 
   .rsm-logo{
     width: 240px;
     background-color: red;
   }
   .sf-logo{
-    width: 200px;
+    width: 240px;
     background-color: red;
 
   }
   .twib-logo{
-    width: 50px;
+    width: 100px;
     background-color: red;
 
 
   }
   .cs-logo{
-    width: 80px;
+    width: 50px;
   }
 
 
@@ -176,7 +178,9 @@ a:hover {
 }
 .client-list{
   text-align: center;
-  background-color:black;
+  /* background-color:black; */
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
 }
 
 .client-list ul{
@@ -214,6 +218,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 
+
 }
 .pill{
   background-color: red;
@@ -224,6 +229,40 @@ a:hover {
   padding: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
 
+
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.client-services-contact {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
 }
 
 
