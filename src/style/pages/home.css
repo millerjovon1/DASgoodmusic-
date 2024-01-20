@@ -188,6 +188,8 @@ a:hover {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 1px solid red;
+
 }
 
 .client-list li{
@@ -216,7 +218,8 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
+  background-color: black;
 
 
 }
@@ -229,8 +232,29 @@ a:hover {
   padding: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
 
-
 }
+
+
+.home-services-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+
+  .home-services-text{
+    width: 40%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2{
+    border-bottom: 1px solid red;
+
+  }
+}
+
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; /* Full width */
@@ -260,11 +284,73 @@ input[type=submit]:hover {
 
 /* Add a background color and some padding around the form */
 .client-services-contact {
+
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
+  width: 300px;
+  border: 1px solid red;
+  margin: 20px;
+  height: 500px;
 }
 
+.das-collaborations-card{
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%; /* Adjust this value based on your needs */
+  /* Optional: Add some margin for spacing between items */
+  /* margin: 0 10px; */
+  /* Optional: Allow items to grow if there is extra space */
+  flex-grow: 1;
+  /* Optional: Align items as needed */
+  align-self: flex-start;
+
+}
+.artist-card{
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 4px;
+  margin: 12px;
+}
+
+.promotion-card{
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.why-us-ad{
+  background: linear-gradient(to bottom, #d8784494, #3f2412);
+  font-family: 'Font Awesome 6 Free Solid';
+  border: 1px solid red;
+  width: 300px;
+  height: 400px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 8px;
+
+  .why-us-title{
+    border-bottom: 1px solid red;
+  }
+
+
+}
 
 /* Add more styles as needed */
 
