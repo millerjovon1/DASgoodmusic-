@@ -130,34 +130,7 @@ a:hover {
 
 
 }
-.das-publications{
-  width: 30%;
-  text-align: left;
-  height: 160px;
-  border: 1px solid white;
 
-
-  .rsm-logo{
-    width: 240px;
-    background-color: red;
-  }
-  .sf-logo{
-    width: 240px;
-    background-color: red;
-
-  }
-  .twib-logo{
-    width: 100px;
-    background-color: red;
-
-
-  }
-  .cs-logo{
-    width: 50px;
-  }
-
-
-}
 
 .home-banner-text{
   text-align: left;
@@ -255,6 +228,16 @@ a:hover {
   }
 }
 
+.client-services-contact {
+
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
+  width: 300px;
+  border: 1px solid red;
+  margin: 20px;
+  height: 500px;
+}
+
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; /* Full width */
@@ -283,37 +266,33 @@ input[type=submit]:hover {
 }
 
 /* Add a background color and some padding around the form */
-.client-services-contact {
 
-  border-radius: 5px;
-  background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
-  width: 300px;
-  border: 1px solid red;
-  margin: 20px;
-  height: 500px;
+.das-artist-section{
+  max-width: 100%;
+  width: 100%;
+  background-color: black;
 }
-
 .das-collaborations-card{
   width: 100%;
   background-color: black;
   display: flex;
   justify-content: space-evenly ;
-  align-items: center;
 
 
 }
   .artist-profile{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
-    max-width: 100%; /* Adjust this value based on your needs */
+    max-width: 100%;
+    width: 50%; /* Adjust this value based on your needs */
   /* Optional: Add some margin for spacing between items */
   /* margin: 0 10px; */
   /* Optional: Allow items to grow if there is extra space */
     flex-grow: 1;
   /* Optional: Align items as needed */
     align-self: flex-start;
+    padding: 2%;
 
     .artist-card{
       width: 120px;
@@ -344,18 +323,16 @@ input[type=submit]:hover {
     }
   }
   .das-publications{
-    width: 30%;
+    width: 40%;
     text-align: left;
-    height: 160px;
-    border: 1px solid white;
 
 
     .rsm-logo{
-      width: 240px;
+      width: 360px;
       background-color: red;
     }
     .sf-logo{
-      width: 240px;
+      width: 360px;
       background-color: red;
 
     }
@@ -366,11 +343,62 @@ input[type=submit]:hover {
 
     }
     .cs-logo{
-      width: 50px;
+      width: 240px;
     }
+    .nmw-sp{
+      width: 120px;
 
-
+    }
+    .spin-sp{
+      width: 120px;
+    }
+    .tr-sp{
+      width:117px;
+    }
   }
+  .artist-contact-section{
+    background-color: black;
+    max-width: 100%;
+  }
+  .artist-services-contact {
+
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
+    width: 300px;
+    border: 1px solid red;
+    margin: 20px;
+    height: 500px;
+  }
+
+  /* Style inputs with type="text", select elements and textareas */
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* Add a background color and some padding around the form */
+
 
 
 
