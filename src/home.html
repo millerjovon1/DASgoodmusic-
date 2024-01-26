@@ -37,7 +37,7 @@
                 Although based in the U.S., we operate internationally with a presence in America, Tokyo, and Paris.</p>
                 <h3>Elevate Your Project: Choose DA$goomusic</h3>
               </div>
-              <div class="blue-btn">Explore Catalogue</div>
+              <div class="explore-btn">Explore Catalogue</div>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
         <div class="home-services-section">
           <div class="home-services-text">
             <p>Learn More about DA$goodmusic services.</p>
-            <div class="blue-btn">
+            <div class="learn-more-btn">
               Learn More
             </div>
             <h2>Choose DA$goodmusic for your next project</h2>
@@ -77,6 +77,7 @@
 
                 <label for="services">Service</label>
                 <select id="service-home" name="service">
+                  <option value="music-production">Music Production</option>
                   <option value="music-production">Music Production</option>
                   <option value="sync-licencing">Sync Licencing</option>
                   <option value="singing-Songwriting-Rapping">Singing-Songwriting-Rapping</option>
@@ -95,8 +96,19 @@
             </div>
           </div>
           <div class="das-artist-section">
-
-            <h2>Artist Collaborations</h2>
+          <div class="artist-section-header">
+            <div class="artist-header-text">
+              <h3>Label</h3>
+              <p>
+                Good Music First.
+                we activly release music spotlighting upcoming and new artists.
+                Our tracks, chosen for sync licensing opportunities, have found homes
+                in playlists like Chillselect, Spotify Japan Editorial, Rolling Stones,
+                and European Publications.
+              </p>
+            </div>
+            <img class="das-globe-logo" src="./images/das_globe_logo.png"  alt="das_globe_logo">
+          </div>
             <div class="das-collaborations-card">
               <div class="artist-profile">
                 <div class="artist-card">
@@ -168,27 +180,72 @@
                 </div>
               </div>
               <div class="artist-contact-section">
-                <div class="artist-services-contact">
-                  <form action="services-action">
+                <div class="artist-services-text">
+                  <h2>Collaborate with DA$goodmusic - DA$goodmusic artist services </h2>
+                  <h3>
+                    We know what we do best, making good music with artist all over the world.
+                    which is why we can offer it to clients and artist.
+                  </h3>
 
-                    <label for="company-name">Label Name/Company Name</label>
-                    <input type="text" id="company-name" name="company-name" placeholder="Label Name/Company Name..">
+                  <h3> 🎹 Music Production Services:</h3>
+                  <p>
+                    Craft your unique sound with our top-notch music production services.
+                    Whether you need captivating beats or professional mixing/mastering,
+                    we're here to elevate your musical vision.
+                  </p>
 
-                    <label for="services">Service</label>
-                    <select id="service-home" name="service">
-                      <option value="music-production">Music Production</option>
-                      <option value="sync-licencing">Sync Licencing</option>
-                      <option value="singing-Songwriting-Rapping">Singing-Songwriting-Rapping</option>
-                      <option value="voice-narration">Voice Narration & Broadcasting</option>
-                      <option value="exclusives">Exlusives Releases & Collaboration</option>
-                      <option value="talent-scouting">A&R & Talent Scouting</option>
+                 <h3>  Studio Recording Services:</h3>
+                 <p>
+                    Bring your projects to life in our cutting-edge studio. Record your tracks,
+                    rent our studio for your own projects, and immerse yourself in a space designed
+                    for creativity.
+                 </p>
 
-                    </select>
+                 <h3>  🖥️ Web Development Services:</h3>
+                 <p>
+                    Take control of your artistic identity with our integrated technical services.
+                    Monsieur Jovoni's expertise extends to creating personalized artist, band, or
+                    label landing pages. Stay up to date with modern conventions and showcase your
+                    unique vision to the world.
+                 </p>
 
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <h3>Amplifying Artist Potential</h3>
+                </p>
+                    Whether you're an independent artist or part of a major commercial project,
+                    we offer a holistic approach. Collaborate with us, and let's explore the
+                    possibilities of bringing your unique vision to life.
+                </p>
 
-                    <input type="submit" value="Submit">
+                    <p>Learn more about DA$goodmusic's artist services.</p>
+                    <div class="learn-more-btn">
+                      Learn More
+                    </div>
+                  </div>
+                  <div class="artist-contact-form">
+                    <form action="services-action">
+
+                      <label for="artist-name">Name/Artist Name</label>
+                      <input type="text" id="artist-name" name="artist-name" placeholder="Label Name/Artist Name..">
+
+                      <label for="artist-track-url">Track/Artist URL</label>
+                      <input type="text" id="artist-url" name="artist-url" placeholder="Spotify/Apple Music/Soundcloud..">
+
+                      <label for="services">Service</label>
+                      <select id="service-home" name="service">
+                        <option value="music-production">Music Production</option>
+                        <option value="recording-services">Recording/Studio Services</option>
+                        <option value="sync-licencing">Sync Licencing</option>
+                        <option value="singing-Songwriting-Rapping">Singing-Songwriting-Rapping</option>
+                        <option value="voice-narration">Voice Narration & Broadcasting</option>
+                        <option value="exclusives">Exlusives Releases & Collaboration</option>
+                        <option value="talent-scouting">A&R & Talent Scouting</option>
+
+                      </select>
+
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                      <input type="submit" value="Submit">
 
                   </form>
                 </div>
@@ -198,43 +255,62 @@
             </div>
 
 
-            <h2>Why us?</h2>
-            <div class="promotion-card">
-              <div class="why-us-ad">
-                <div class="why-us-title">
-                  <h3>Active Music Presence</h3>
-            </div>
-                <p>
-                  Stay ahead with a production actively releasing music and collaborating with artists,
-                   offering a current edge to your commercial projects.
-                </p>
-              </div>
-              <div class="why-us-ad">
-                <div class="why-us-title">
-                  <h3> Dual Expertise, Added Value</h3>
+            <div class="about">
+              <div class="das-bio">
+                <div class="dasteam-profile-card">
+                  <img class="das-team-avatar" src="./images/jp.jpeg" alt="jp-profile-photo">
+                  <div class="team-member-info">
+                    <h3>J.P</h3>
+                    <p>Co-Founder - Catalouge Management - Artist Developement</p>
+                  </div>
+                  </div>
+
+                <div class="dasteam-profile-card">
+                  <img class="das-team-avatar" src="./images/monsieurjovoni.jpeg"  alt="monsieurjovoni-team-img">
+                  <div class="team-member-info">
+                    <h3>Monsiuer Jovoni</h3>
+                    <p>Co-Founder- Lead Producer - Artist - Web Developer</p>
+                  </div>
+                  </div>
                 </div>
-                <p>
-                 Our dual experience in creativity and service ensures effective solutions with added value for our clients.
-               </p>
-              </div>
-              <div class="why-us-ad">
-                <div class="why-us-title">
-                  <h3>>Direct Talent Collaboration </h3>
+                <h2>Why us?</h2>
+                <div class="promotion-card">
+                  <div class="why-us-ad">
+                    <div class="why-us-title">
+                      <h3>Active Music Presence</h3>
+                    </div>
+                    <p>
+                      Stay ahead with a production actively releasing music and collaborating with artists,
+                      offering a current edge to your commercial projects.
+                    </p>
+                  </div>
+                  <div class="why-us-ad">
+                    <div class="why-us-title">
+                      <h3> Dual Expertise, Added Value</h3>
+                    </div>
+                    <p>
+                      Our dual experience in creativity and service ensures effective solutions with added value for our clients.
+                    </p>
+                  </div>
+                  <div class="why-us-ad">
+                    <div class="why-us-title">
+                      <h3>>Direct Talent Collaboration </h3>
+                    </div>
+                    <p>
+                      We blend music with technology, offering scalable services like landing pages and upcoming SaaS features,
+                      showcased in Flip It – our collaborative music platform.
+                    </p>
+                  </div>
+                  <div class="why-us-ad">
+                    <div class="why-us-title">
+                      <h3>Tech-Driven Services</h3>
+                    </div>
+                    <p>
+                      We blend music with technology, offering scalable services like landing pages
+                      and upcoming SaaS features, showcased in Flip It – our collaborative music platform. Learn more </p>
+                    </div>
+                  </div>
                 </div>
-                <p>
-                  We blend music with technology, offering scalable services like landing pages and upcoming SaaS features,
-                  showcased in Flip It – our collaborative music platform.
-                </p>
               </div>
-              <div class="why-us-ad">
-                <div class="why-us-title">
-                  <h3>Tech-Driven Services</h3>
-                </div>
-                <p>
-                  We blend music with technology, offering scalable services like landing pages
-                  and upcoming SaaS features, showcased in Flip It – our collaborative music platform. Learn more </p>
-              </div>
-             </div>
-            </div>
-          </body>
-          </html>
+              </body>
+              </html>

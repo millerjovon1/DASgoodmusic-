@@ -11,8 +11,6 @@ body {
   background: linear-gradient(to bottom, #d8784494, #3f2412);
   overflow-x: hidden; /* Prevent horizontal scrollbar */
   color: var(--main-color);
-
-
 }
 
 .main-container-home {
@@ -20,13 +18,37 @@ body {
   max-width: 1200px; /* Adjust as needed */
   margin: 0 auto;
   padding: 20px;
-
-
 }
 
+/* == Buttons == */
 
+.explore-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  font-family: 'Royal Acidbath', sans-serif;
+}
 
+.learn-more-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  font-family: 'Royal Acidbath', sans-serif;
+}
 
+/* == Nav Bar == */
 .nav-bar {
   height: 40px;
   display: flex;
@@ -38,9 +60,6 @@ body {
   margin-bottom: 4px;
   font-size: 24px;
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent); */
-
-
-
 }
 
 
@@ -50,10 +69,9 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-
-
 }
 
+/* == Fonts == */
 .home-button li, .nav-menu li {
   margin-right: 20px;
   font-family: 'Big Shoulders Display', sans-serif;
@@ -63,7 +81,6 @@ h1 {
   font-size: 2em;
   margin-bottom: 0.5em;
   font-family: 'Font Awesome 6 Free Solid';
-
 }
 
 h2 {
@@ -71,6 +88,7 @@ h2 {
   margin-bottom: 0.5em;
   font-family: 'Font Awesome 6 Free Solid';
 }
+
 h3{
   font-size: 1.7em;
   margin-block-start: 1em;
@@ -79,16 +97,12 @@ h3{
   margin-inline-end: 0;
   font-family: 'Big Shoulders Display', sans-serif;
   font-weight: 600;
-
-
 }
 
 p {
   margin-bottom: 1em;
   font-family: 'Big Shoulders Display', sans-serif;
   font-weight: 800;
-
-
 }
 
 a {
@@ -99,6 +113,15 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* == logo == */
+.das-globe-logo{
+  background: red;
+  width: 200px;
+  border-radius: 40%;
+  padding: 2%;
+}
+
 /* ===Banner/Header=== */
 #home-banner {
   width: 100%;
@@ -113,13 +136,11 @@ a:hover {
   display: flex;
   /* flex-direction: row; */
   justify-content: space-between;
-
 }
 
 .home-banner-logo{
   display: flex;
   flex-direction: column;
-
 }
 
 
@@ -127,8 +148,6 @@ a:hover {
   width: 320px;
   padding-top: 12px;
   /* box-shadow: 0 10px 30px rgba(0,0,0,.1);    Light shadow */
-
-
 }
 
 
@@ -136,19 +155,8 @@ a:hover {
   text-align: left;
 }
 
-.blue-btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: red;
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  font-family: 'Royal Acidbath', sans-serif;
+/* == Client Section == */
 
-}
 .client-list{
   text-align: center;
   /* background-color:black; */
@@ -162,14 +170,11 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   border-bottom: 1px solid red;
-
 }
 
 .client-list li{
   text-decoration: none;
   list-style-type: none;
-
-
 
   #otoco{
     width: 200px;
@@ -181,7 +186,6 @@ a:hover {
   #d-league{
     width:200px;
   }
-
 }
 
 
@@ -193,9 +197,8 @@ a:hover {
   justify-content: space-between;
   /* align-items: center; */
   background-color: black;
-
-
 }
+
 .pill{
   background-color: red;
   text-align: center;
@@ -204,7 +207,6 @@ a:hover {
   border-radius: 8px;
   padding: 4px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
-
 }
 
 
@@ -220,16 +222,15 @@ a:hover {
     text-align: left;
     display: flex;
     flex-direction: column;
+    background-color: gray;
   }
 
   h2{
     border-bottom: 1px solid red;
-
   }
 }
 
 .client-services-contact {
-
   border-radius: 5px;
   background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
   width: 300px;
@@ -263,65 +264,82 @@ input[type=submit] {
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #45a049;
+  /* Add a background color and some padding around the form */
 }
 
-/* Add a background color and some padding around the form */
+/* == Artist Section == */
 
 .das-artist-section{
   max-width: 100%;
   width: 100%;
   background-color: black;
 }
+.artist-section-header{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  width: 1200px;
+  margin-top: 12px;
+  padding: 12px;
+
+
+}
+.artist-header-text{
+  width:60% ;
+
+  h3{
+    border-bottom: 1px solid red;
+  }
+}
+
+
 .das-collaborations-card{
   width: 100%;
   background-color: black;
   display: flex;
   justify-content: space-evenly ;
-
-
 }
-  .artist-profile{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%;
-    width: 50%; /* Adjust this value based on your needs */
+.artist-profile{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 50%; /* Adjust this value based on your needs */
   /* Optional: Add some margin for spacing between items */
   /* margin: 0 10px; */
   /* Optional: Allow items to grow if there is extra space */
-    flex-grow: 1;
+  flex-grow: 1;
   /* Optional: Align items as needed */
-    align-self: flex-start;
-    padding: 2%;
+  align-self: flex-start;
+  padding: 2%;
 
-    .artist-card{
-      width: 120px;
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid red;
-      border-radius: 4px;
-      margin: 12px;
-      padding: 4px;
+  .artist-card{
+    width: 120px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 4px;
+    margin: 12px;
+    padding: 4px;
 
-      h3{
+    h3{
         margin: 1px;
       }
-
-
 
      p{
       margin: 0;
      };
-
     }
     .artist-profile-photo{
       width: 80px;
       border-radius: 50%;
     }
   }
+
   .das-publications{
     width: 40%;
     text-align: left;
@@ -337,13 +355,11 @@ input[type=submit]:hover {
 
     }
     .twib-logo{
-      width: 100px;
+      width: 240px;
       background-color: red;
-
-
     }
     .cs-logo{
-      width: 240px;
+      width: 120px;
     }
     .nmw-sp{
       width: 120px;
@@ -359,15 +375,27 @@ input[type=submit]:hover {
   .artist-contact-section{
     background-color: black;
     max-width: 100%;
+    display: flex;
   }
-  .artist-services-contact {
 
+  .artist-contact-form {
     border-radius: 5px;
     background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
     width: 300px;
     border: 1px solid red;
     margin: 20px;
-    height: 500px;
+    height: 700px;
+  }
+  .artist-services-text{
+    width: 60%;
+    margin: 2px auto;
+    padding: 2px auto;
+    background-color: gray;
+
+    h2{
+      border-bottom: 1px solid red;
+    }
+
   }
 
   /* Style inputs with type="text", select elements and textareas */
@@ -401,6 +429,47 @@ input[type=submit]:hover {
 
 
 
+
+/* == bio == */
+
+.about{
+  width: 100%;
+  background-color: black;
+  margin-top: 12px;
+}
+.das-bio{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.dasteam-profile-card{
+  width: 400px;
+  margin: 20px;
+  border:1px solid red;
+  display: flex;
+  flex-direction:row ;
+  justify-content: space-evenly;
+  align-items: center;
+
+
+
+
+  .das-team-avatar{
+    width: 100px;
+    border-radius: 50%;
+
+  }
+
+  .team-member-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+  }
+
+
+}
 
 .promotion-card{
   width: 100%;
