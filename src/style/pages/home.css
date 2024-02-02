@@ -196,7 +196,11 @@ a:hover {
   .das-client-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    margin-top: 12px;
+    padding: 12px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   }
 
@@ -205,6 +209,7 @@ a:hover {
     text-align: left;
     display: flex;
     flex-direction: column;
+
 
     h3{
       border-bottom: 1px solid red;
@@ -215,49 +220,37 @@ a:hover {
     border-bottom: 1px solid red;
   } */
 }
+.client-card{
+  width: 100%;
 
+}
 
-.client-services-pill{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.client-service-section{
+  background-color: black;
   max-width: 100%;
-  width: 86%;
-  flex-grow: 1;
-  align-self:flex-start;
-  padding: 2%;
-  justify-content: space-around;
-  /* align-items: center; */
-  /* background-color: black; */
-}
-
-.pill{
-  background-color: red;
-  text-align: center;
-  /* font-size: 24px; */
-  font-family: 'Big Shoulders Display', sans-serif;
-  border-radius: 8px;
-  padding: 4px;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
-}
-.client-contact-section{
   display: flex;
   justify-content: space-around;
-}
-.client-services-title{
-  width: 50%;
+  align-items: center;
+  padding-bottom:6%;
 
-  h2{
-    width: 90%;
-  }
 }
+
+
+
+
 
 .client-services-text{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+    width: 50%;
+    background-color: gray;
+    height: 700px;
+
+    /* justify-content: center; */
+    padding: 4px;
+    border-radius: 6px;
+
+
+
+
 
   h2{
     /* background-color: red; */
@@ -267,7 +260,7 @@ a:hover {
     /* border-radius: 4px; */
   }
 
-  h3{
+  .r-curve-background{
     width: 100%;
     background-color: rgb(241, 139, 76);
     box-shadow: 0 10px 30px rgba(167, 155, 155, 0.1);
@@ -288,15 +281,42 @@ a:hover {
   }
 
 }
+.client-services-title{
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+}
 
-.client-services-contact {
+.client-services-pill{
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  width: 86%;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* background-color: black; */
+}
+.pill{
+  background-color: red;
+  text-align: center;
+  /* font-size: 24px; */
+  font-family: 'Big Shoulders Display', sans-serif;
+  border-radius: 8px;
+  padding: 4px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
+}
+
+.cs-contact-form {
   border-radius: 5px;
-  background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
-  width: 500px;
+  background: linear-gradient(to bottom, #d8784494, #3f2412);
+  padding: 20px;
+  width: 300px;
   border: 1px solid red;
   margin: 20px;
   height: 500px;
 }
+
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
@@ -343,7 +363,7 @@ input[type=submit]:hover {
   padding: 12px;
 }
 .artist-header-text{
-  width:60% ;
+  width:60%;
 
   h3{
     border-bottom: 1px solid red;
@@ -434,29 +454,29 @@ input[type=submit]:hover {
     background-color: black;
     max-width: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
-  .artist-contact-form {
-    border-radius: 5px;
-    background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
-    width: 300px;
-    border: 1px solid red;
-    margin: 20px;
-    height: 700px;
-  }
+
+
   .artist-services-text{
     width: 50%;
-    margin: 2px auto;
-    padding: 2px auto;
+    padding-bottom: 6%;
+    height: 700px;
+
+
 
     /* #artist-service-title{
       border-bottom: 1px solid red;
     } */
+/* h3 tag class */
+    .r-curve-background{
+      width: 100%;
+      background-color: rgb(241, 139, 76);
+      box-shadow: 0 10px 30px rgba(167, 155, 155, 0.1);
+      border-top-right-radius: 16px;
 
-    h3{
-      /* border-bottom: 1px solid red; */
-      /* background-color: red; */
-      border-radius: 4px;
     }
     /* p tag class */
     .r-border{
@@ -470,7 +490,43 @@ input[type=submit]:hover {
 
   }
 
+  .artist-service-title{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
 
+
+  .artist-services-pill{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    width: 80%;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* background-color: black; */
+  }
+  .pill{
+    background-color: red;
+    text-align: center;
+    /* font-size: 24px; */
+    font-family: 'Big Shoulders Display', sans-serif;
+    border-radius: 8px;
+    padding: 4px;
+    margin-top: 0px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
+  }
+
+
+  .artist-contact-form {
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
+    width: 300px;
+    border: 1px solid red;
+    margin: 20px;
+    height: 600px;
+  }
 
   /* Style inputs with type="text", select elements and textareas */
   input[type=text], select, textarea {
