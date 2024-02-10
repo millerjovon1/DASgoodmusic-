@@ -2,24 +2,23 @@
 @import url('https://fonts.cdnfonts.com/css/royal-acidbath');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+@import url('https://fonts.cdnfonts.com/css/roboto-condensed');
+
+
 /* main-layout */
 body {
   margin: 0;
   padding: 0;
-  background:black;
+  /* background:black; */
   overflow-x: hidden; /* Prevent horizontal scrollbar */
   color: var(--main-color);
+  background: linear-gradient(rgb(0 0 0 / 94%), rgba(61, 43, 6, 0.93))
 }
 
-.main-container-home {
-/* Adjust as needed */
-  margin: 0 auto;
-  padding: 20px;
-  /* background: linear-gradient(to bottom, #ffbf42, #3f2412); */
 
-}
 
 
 /* == Buttons == */
@@ -41,10 +40,7 @@ body {
 
 /* == Nav Bar == */
 
-/* I apologize for the oversight. Let's refine the styles to address the spacing issue between the navigation items and the walls of the website. Here's an updated suggestion:
 
-css
-Copy code */
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -82,27 +78,29 @@ Copy code */
 h1 {
   font-size: 2em;
   margin-bottom: 0.5em;
-  font-family: 'Montserrat', sans-serif;}
+  font-family: 'Oswald', sans-serif;
+}
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.7em; /* Adjusted font size */
   margin-bottom: 0.5em;
-  font-family: 'Montserrat', sans-serif;}
+  font-family: 'Oswald', sans-serif;
+}
 
-h3{
-  font-size: 1.7em;
+h3 {
+  font-size: 1.5em; /* Adjusted font size */
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  font-family: 'Montserrat', sans-serif;  font-weight: 600;
+  font-family: 'Oswald', sans-serif;
 }
 
 p {
   margin-bottom: 1em;
-  font-size: 20px;
-  font-family: 'Big Shoulders Display', sans-serif;
-  font-weight: 800;
+  font-size: 1em; /* Adjust the value based on your preference */
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  font-weight: 200;
 }
 
 a {
@@ -124,7 +122,7 @@ a:hover {
 
 /* ===Banner/Header=== */
 .banner {
-  background-image: linear-gradient(rgb(232 159 56 / 64%), rgb(130 89 28 / 79%)),
+  background-image: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%)),
   url(/src/images/banner_cover3.png);
   height: auto;
   background-size: cover;
@@ -159,9 +157,19 @@ a:hover {
   text-align: left;
 }
 
+/* ==Main Container */
+
+.main-container-home{
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: center;
+}
+
 /* == Client Section == */
 
 .client-list{
+  /* width: 1200px; */
   text-align: center;
   /* background-color:black; */
   /* border-bottom: 1px solid red; */
@@ -170,7 +178,7 @@ a:hover {
 .client-list ul{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px solid white;
   border-top: 1px solid white;
@@ -199,17 +207,16 @@ a:hover {
 
 
 .das-client-section{
-  background-color: black;
+  /* background-color: black; */
   width: 100%;
-  background: linear-gradient(to bottom, #ffbf42, #3f2412);
+  /* background: linear-gradient(to bottom, #ffbf42, #3f2412); */
 
 
   .das-client-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    width: 1200px;
     margin-top: 12px;
     padding: 12px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -222,14 +229,15 @@ a:hover {
     flex-direction: column;
 
 
-    h3{
+    .client-header-text h3{
       border-bottom: 1px solid white;
     }
   }
 
-  /* h2{
-    border-bottom: 1px solid red;
-  } */
+   .client-header-text h2{
+    border-bottom: 1px solid white;
+    margin: 0;
+  }
 }
 .client-card{
   width: 100%;
@@ -240,14 +248,11 @@ a:hover {
   /* background-color: black; */
   max-width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   padding-bottom:6%;
   /* background: linear-gradient(to bottom, #1e1e1e, #2c2c2c); */
-
-
 }
-
 
 
 
@@ -255,22 +260,57 @@ a:hover {
 .client-services-text {
   width:628px;
   /* background: linear-gradient(to bottom, #ffbf42, #3f2412); */
-  height: 780px;
+  height: 640px;
   display: flex;
+  text-align: left;
+  /* text-align: left; */
+  padding: 4%;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  padding: 4px;
   border-radius: 8px;
   margin-top: 2%;
   background-color: black;
 
+}
 
-  h2 {
-    box-shadow: 0 10px 30px rgba(105, 97, 97, 0.1);
-    text-align: center;
+.client-services-pill{
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: -40px;
+}
 
+.client-services-pill h3{
+  margin-bottom: 0px;
+}
+
+ .client-services-pill ul{
+    padding: 0px;
+    margin: 0px;
   }
+
+
+ .client-services-pill li{
+    display: inline-block;
+  }
+
+  .pill{
+    background-color: red;
+    text-align: center;
+    font-family: 'Big Shoulders Display', sans-serif;
+    border-top-left-radius: 10px; /* Adjust the radius as needed */
+    border-top-right-radius: 10px;
+    padding: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
+  }
+
+
+
+.client-service-info{
+  padding: 4px auto;
+
+
+
+}
 
   .r-curve-background {
     width: 100%;
@@ -279,20 +319,28 @@ a:hover {
     border-top-right-radius: 16px;
   }
 
-  .r-border {
+.r-border {
     border-bottom: 1px solid white;
     border-right: 1px solid white;
     text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
   }
 
-  li {
+  .client-service-info ul{
+    padding: 0px;
+    margin: 0px;
+
+  }
+
+  .client-service-info li {
     list-style: none;
     display: inline-block;
   }
 
 
 
-}
+
+
+
 .learn-more-btn-cs{
   display: flex;
   align-items: center;
@@ -308,28 +356,6 @@ a:hover {
 
 
 
-
-.client-services-pill{
-  max-width: 100%;
-  margin-bottom: -60px;
-
-
- li{
-    display: inline-block;
-  }
-  /* align-items: center; */
-  /* background-color: black; */
-  .pill{
-    background-color: red;
-    text-align: center;
-    /* font-size: 24px; */
-    font-family: 'Big Shoulders Display', sans-serif;
-    border-radius: 8px;
-    padding: 4px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
-  }
-}
 
 .cs-form-wrapper{
   display: flex;
@@ -386,49 +412,50 @@ input[type=submit]:hover {
 .das-artist-section{
   max-width: 100%;
   width: 100%;
-  background-color: black;
+  /* background-color: black; */
 }
 .artist-section-header{
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
+  text-align: left;
   align-items: center;
-  width: 1200px;
   margin-top: 12px;
   padding: 12px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 .artist-header-text{
   width:60%;
 
-  h3{
-    border-bottom: 1px solid red;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-  }
+}
+
+.artist-header-text h2{
+  border-bottom: 1px solid white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 
 .das-collaborations-card{
-  width: 100%;
-  background-color: black;
   display: flex;
-  justify-content: space-evenly ;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  flex-direction: row;
+  flex-direction: row-reverse;
 }
+
 .artist-profile{
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  max-width: 100%;
-  width: 50%; /* Adjust this value based on your needs */
-  /* Optional: Add some margin for spacing between items */
-  /* margin: 0 10px; */
-  /* Optional: Allow items to grow if there is extra space */
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
   /* Optional: Align items as needed */
   align-self: flex-start;
   padding: 2%;
+}
 
   .artist-card{
-    width: 120px;
+    width: 140PX;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -451,43 +478,43 @@ input[type=submit]:hover {
       width: 80px;
       border-radius: 50%;
     }
-  }
+
 
   .das-publications{
-    width: 40%;
     text-align: left;
+    width: 800px;
 
 
     .rsm-logo{
-      width: 360px;
+      width: 400px;
       background-color: red;
     }
     .sf-logo{
-      width: 360px;
+      width: 400px;
       background-color: red;
 
     }
     .twib-logo{
-      width: 240px;
+      width: 260px;
       background-color: red;
     }
     .cs-logo{
-      width: 120px;
+      width: 130px;
     }
     .nmw-sp{
-      width: 120px;
+      width: 132px;
 
     }
     .spin-sp{
-      width: 120px;
+      width: 132px;
     }
     .tr-sp{
-      width:117px;
+      width:128px;
     }
   }
 
   .artist-contact-section{
-    background-color: black;
+    /* background-color: black; */
     max-width: 100%;
     display: flex;
     justify-content: space-around;
@@ -498,7 +525,7 @@ input[type=submit]:hover {
 
   .artist-services-text{
     width:628px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: black;
     height: 780px;
     display: flex;
     flex-direction: column;
@@ -581,7 +608,8 @@ input[type=submit]:hover {
 
   .artist-contact-form {
     border-radius: 5px;
-    background: linear-gradient(to bottom, #d8784494, #3f2412);  padding: 20px;
+    background: black;
+    padding: 20px;
     width: 360px;
     border: 1px solid red;
     margin: 20px;
@@ -624,7 +652,7 @@ input[type=submit]:hover {
 
 .about{
   width: 100%;
-  background-color: black;
+  /* background-color: black; */
   margin-top: 12px;
   position: relative;
 }
