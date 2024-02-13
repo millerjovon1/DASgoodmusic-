@@ -15,7 +15,7 @@ body {
   /* background:black; */
   overflow-x: hidden; /* Prevent horizontal scrollbar */
   color: var(--main-color);
-  background: linear-gradient(rgb(0 0 0 / 94%), rgba(61, 43, 6, 0.93))
+  background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;;
 }
 
 
@@ -136,7 +136,8 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin: 0 6%;
+  margin: 0 8%;
+  width: 800px;
 }
 
 
@@ -161,9 +162,10 @@ a:hover {
 
 .main-container-home{
   width: 100%;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto; /* Center the container horizontally */
   text-align: center;
+
 }
 
 /* == Client Section == */
@@ -171,6 +173,7 @@ a:hover {
 .client-list{
   /* width: 1200px; */
   text-align: center;
+  /* margin: 0 auto; */
   /* background-color:black; */
   /* border-bottom: 1px solid red; */
 }
@@ -198,10 +201,7 @@ a:hover {
   #d-league{
     width:180px;
   }
-  #big-up{
-    width: 360px;
 
-  }
 
 }
 
@@ -221,6 +221,7 @@ a:hover {
     padding: 12px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   }
+}
 
   .client-header-text{
     width: 60%;
@@ -228,17 +229,16 @@ a:hover {
     display: flex;
     flex-direction: column;
 
-
-    .client-header-text h3{
-      border-bottom: 1px solid white;
-    }
+  }
+  .client-header-text h3{
+    border-bottom: 1px solid white;
   }
 
    .client-header-text h2{
     border-bottom: 1px solid white;
     margin: 0;
   }
-}
+
 .client-card{
   width: 100%;
 
@@ -249,8 +249,10 @@ a:hover {
   max-width: 100%;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   padding-bottom:6%;
+  background: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%));
+  border-radius: 8px;
+
   /* background: linear-gradient(to bottom, #1e1e1e, #2c2c2c); */
 }
 
@@ -258,18 +260,17 @@ a:hover {
 
 
 .client-services-text {
-  width:628px;
+  width:500px;
   /* background: linear-gradient(to bottom, #ffbf42, #3f2412); */
-  height: 640px;
+  height: 680px;
   display: flex;
   text-align: left;
   /* text-align: left; */
-  padding: 4%;
+  padding: 2%;
   flex-direction: column;
   justify-content: center;
   border-radius: 8px;
   margin-top: 2%;
-  background-color: black;
 
 }
 
@@ -294,7 +295,7 @@ a:hover {
   }
 
   .pill{
-    background-color: red;
+    background: linear-gradient(to bottom, #3498db 0%, #3498db 50%, #1f4788 100%);
     text-align: center;
     font-family: 'Big Shoulders Display', sans-serif;
     border-top-left-radius: 10px; /* Adjust the radius as needed */
@@ -307,21 +308,21 @@ a:hover {
 
 .client-service-info{
   padding: 4px auto;
-
-
-
 }
 
   .r-curve-background {
     width: 100%;
-    background-color: rgb(241, 139, 76);
+    background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;;
     box-shadow: 0 10px 30px rgba(167, 155, 155, 0.1);
     border-top-right-radius: 16px;
+    font-weight: 300;
+    font-style: italic;
+
   }
 
 .r-border {
-    border-bottom: 1px solid white;
-    border-right: 1px solid white;
+    border-bottom: 1px solid #3498db;
+    border-right: 1px solid #3498db;
     text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
   }
 
@@ -345,7 +346,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background: linear-gradient(to bottom, #3498db 0%, #3498db 50%, #1f4788 100%);
   text-align: center;
   width: 200px;
   height: 50px;
@@ -360,22 +361,20 @@ a:hover {
 .cs-form-wrapper{
   display: flex;
   flex-direction: column;
-  width: 400px;
   justify-content: center;
   align-items: center;
-
+  width: 500px;
+  padding: 2%;
 }
 
 
 .cs-contact-form {
   border-radius: 5px;
   padding: 20px;
-  width: 400px;
-  border: 1px solid white;
+  width: 500px;
   margin: 20px;
   height: 500px;
-  background-color: black;
-
+  border: 1px solid black;
 }
 
 
@@ -417,12 +416,14 @@ input[type=submit]:hover {
 .artist-section-header{
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: left;
   align-items: center;
   margin-top: 12px;
   padding: 12px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  /* background: linear-gradient(to bottom, #3498db 0%, #3498db 50%, #1f4788 100%); */
+
 }
 .artist-header-text{
   width:60%;
@@ -437,34 +438,42 @@ input[type=submit]:hover {
 
 .das-collaborations-card{
   display: flex;
-  justify-content: space-evenly;
-  /* align-items: center; */
+  align-items: flex-start;
   flex-direction: row;
   flex-direction: row-reverse;
 }
+.das-artist{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.das-artist h3{
+  margin-bottom: 0;
+}
 
 .artist-profile{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  /* Optional: Align items as needed */
-  align-self: flex-start;
-  padding: 2%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+  gap: 4px;
+  border-radius: 4px;
+  margin: 12px;
+  padding: 4px;
 }
 
   .artist-card{
-    width: 140PX;
+    width: 120px;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    border: 1px solid grey;
     border-radius: 4px;
     margin: 12px;
     padding: 4px;
+
 
     h3{
         margin: 1px;
@@ -482,16 +491,26 @@ input[type=submit]:hover {
 
   .das-publications{
     text-align: left;
-    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .pub-logos{
+    width: 500px;
 
 
     .rsm-logo{
-      width: 400px;
+      width: 420px;
       background-color: red;
     }
     .sf-logo{
-      width: 400px;
+      width: 420px;
       background-color: red;
+    }
+    #big-up{
+      width: 420px;
 
     }
     .twib-logo{
@@ -499,73 +518,123 @@ input[type=submit]:hover {
       background-color: red;
     }
     .cs-logo{
-      width: 130px;
+      width: 102px;
     }
     .nmw-sp{
-      width: 132px;
+      width: 102px;
 
     }
     .spin-sp{
-      width: 132px;
+      width: 103px;
     }
     .tr-sp{
-      width:128px;
+      width:102px;
     }
+
   }
+
+
+
+
+
 
   .artist-contact-section{
     /* background-color: black; */
     max-width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-evenly;
     padding-bottom: 6%;
+    max-width: 100%;
+    background: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%));
+    border-radius: 8px;
   }
 
 
-  .artist-services-text{
-    width:628px;
-    background: black;
-    height: 780px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding: 4px;
-    border-radius: 8px;
-    margin-top: 2%;
+ .artist-services-text{
+  width: 540px;
+  height: 680px;
+  display: flex;
+  text-align: left;
+  padding: 2%;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  margin-top: 2%;
 
-    h2 {
-    box-shadow: 0 10px 30px rgba(105, 97, 97, 0.1);
+  }
+
+.artist-services-pill{
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: -40px;
+}
+
+.artist-services-pill h3{
+  margin-bottom: 0px;
+  font-style:italic;
+}
+
+ .artist-services-pill ul{
+    padding: 0px;
+    margin: 0px;
+  }
+
+
+ .artist-services-pill li{
+    display: inline-block;
+  }
+
+  .pill{
+    background: linear-gradient(to bottom, #3498db 0%, #3498db 50%, #1f4788 100%);
     text-align: center;
-       }
+    font-family: 'Big Shoulders Display', sans-serif;
+    border-top-left-radius: 10px; /* Adjust the radius as needed */
+    border-top-right-radius: 10px;
+    padding: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
+  }
+
+
+
+  .artist-service-info{
+    padding: 4px auto;
+  }
 
   .r-curve-background {
     width: 100%;
-    background-color: rgb(241, 139, 76);
+    background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;;
     box-shadow: 0 10px 30px rgba(167, 155, 155, 0.1);
     border-top-right-radius: 16px;
+    font-weight: 300;
+    font-style: italic;
+
   }
 
-  .r-border {
-    border-bottom: 1px solid red;
-    border-right: 1px solid red;
+.r-border {
+    border-bottom: 1px solid #3498db;
+    border-right: 1px solid #3498db;
     text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
   }
 
-  li {
+  .artist-service-info ul{
+    padding: 0px;
+    margin: 0px;
+
+  }
+
+  .artist-service-info li {
     list-style: none;
     display: inline-block;
   }
 
 
 
-}
 .learn-more-btn-as{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background: linear-gradient(to bottom, #3498db 0%, #3498db 50%, #1f4788 100%);
   text-align: center;
   width: 200px;
   height: 50px;
@@ -574,46 +643,23 @@ input[type=submit]:hover {
   font-family: 'Royal Acidbath', sans-serif;
 }
 
-
-
-
-.artist-services-pill{
-  max-width: 100%;
-  margin-bottom: -60px;
-
-
- li{
-    display: inline-block;
-  }
-  /* align-items: center; */
-  /* background-color: black; */
-  .pill{
-    background-color: red;
-    text-align: center;
-    /* font-size: 24px; */
-    font-family: 'Big Shoulders Display', sans-serif;
-    border-radius: 8px;
-    padding: 4px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.1);    /* Light shadow */
-  }
-}
 .as-form-wrapper{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 500px;
+  height: 600px;
+  padding: 2%;
+  border: 1px solid black;
 }
 
   .artist-contact-form {
-    border-radius: 5px;
-    background: black;
-    padding: 20px;
-    width: 360px;
-    border: 1px solid red;
-    margin: 20px;
-    height: 600px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 500px;
+  margin: 20px;
+  height: 600px;
   }
 
   /* Style inputs with type="text", select elements and textareas */
@@ -665,7 +711,8 @@ input[type=submit]:hover {
 .dasteam-profile-card{
   width: 480px;
   margin: 20px;
-  border:1px solid red;
+  border: 1px solid #3498db;
+
   display: flex;
   flex-direction:row ;
   justify-content: space-evenly;
@@ -726,6 +773,8 @@ input[type=submit]:hover {
 
 
 .why-us-card{
+  position: relative;
+  z-index: 1;
   /* background: linear-gradient(to bottom, #d8784494, #3f2412); */
   font-family: 'Royal Acidbath', sans-serif;
   width: 300px;
@@ -737,7 +786,8 @@ input[type=submit]:hover {
   padding: 8px;
 
   .whyus-card-title{
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #3498db;
+
 
     h3{
       font-family: 'Font Awesome 6 Free Solid';
@@ -762,5 +812,6 @@ input[type=submit]:hover {
 }
 
 .custom-shape-divider-bottom-1706346388 .shape-fill {
-  fill: #417505;
+  fill:rgb(121 5 5 / 30%);
+
 }
