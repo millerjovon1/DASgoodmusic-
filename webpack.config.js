@@ -7,7 +7,7 @@ module.exports = {
     index: './src/index.js',
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
@@ -20,11 +20,11 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/home.html',
-      chunks: ['index'], // Use 'index' chunk for home.html
+      chunks: ['index'], // Change 'index' to the correct chunk name if needed
       filename: 'home.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: './style/style.css',
     }),
   ],
   module: {
@@ -39,6 +39,9 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext][query]',
+        },
       },
     ],
   },

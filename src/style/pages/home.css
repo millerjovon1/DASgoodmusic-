@@ -46,11 +46,12 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #fff; /* Choose your text color */
-  background: linear-gradient(rgba(77, 58, 31, 0.156), rgba(0, 0, 0, 0.79));
+  background: linear-gradient(rgba(136, 84, 21, 0.83), rgba(115, 197, 255, 0.79));
   position: fixed;
   width: 100%;
   z-index: 1000;
   height: 90px;
+
 }
 
 .logo img {
@@ -66,12 +67,23 @@ body {
 
 .nav-menu li {
   margin-right: 20px;
+  font-family: 'Oswald', sans-serif;
+
 }
 
 .nav-menu a {
   text-decoration: none;
   color: inherit;
   font-size: 18px;
+  padding: 8px; /* Increased padding for a larger clickable area */
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nav-menu a:hover {
+  text-decoration: none;
+  background-color: #ff9900; /* Change to your preferred hover color */
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
 }
 /* == Fonts == */
 
@@ -104,8 +116,10 @@ p {
 }
 
 a {
+  margin-bottom: 1em;
+  font-size: 1em;
   text-decoration: none;
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 a:hover {
@@ -124,19 +138,70 @@ a:hover {
 .banner {
   background-image: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%)),
   url(/src/images/banner_cover3.png);
-  height: auto;
+  height: 360px;
   background-size: cover;
   background-position: center;
   padding: 230px 0;
   /* background: linear-gradient(to bottom, #ffbf42, #3f2412); */
 }
 
+
+
+/* style/style.css */
+ .banner-pop-up {
+  text-align: center;
+  background-color: beige;
+  border-radius: 8px;
+  width: 400px;
+  height: 480px;
+  color: black;
+  display: none;
+  /* margin-left: -400px;  */
+  /* animation: slideIn 1s ease-in-out; */
+}
+
+
+
+@keyframes slideIn {
+  from {
+    margin-right: -400px; /* Use negative margin for starting position */
+
+  }
+  to {
+    margin-right: 0; /* Move to the normal left position */
+  }
+}
+
+ .listen-now {
+  border: 1px solid black;
+  width: 100px;
+  margin: 20px auto;
+}
+.release-popup {
+  width: 300px;
+  background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;
+}
+
+/* Ensure all images are initially visible */
+.banner-pop-up img {
+  display: block;
+  margin: 20px auto; /* Adjust the margin as needed */
+}
+
+
+
+.banner-wrapper{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+
+}
 .home-banner-content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin: 0 8%;
   width: 800px;
 }
 
@@ -438,19 +503,21 @@ input[type=submit]:hover {
 
 .das-collaborations-card{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
-  flex-direction: row-reverse;
+  justify-content: space-evenly;
 }
+
 .das-artist{
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: left;
+
 }
 
 .das-artist h3{
   margin-bottom: 0;
+  margin-left: 4%;
 }
 
 .artist-profile{
@@ -652,6 +719,7 @@ input[type=submit]:hover {
   height: 600px;
   padding: 2%;
   border: 1px solid black;
+  border-radius: 8px;
 }
 
   .artist-contact-form {
@@ -712,6 +780,7 @@ input[type=submit]:hover {
   width: 480px;
   margin: 20px;
   border: 1px solid #3498db;
+  border-radius: 4px;
 
   display: flex;
   flex-direction:row ;
@@ -729,7 +798,9 @@ input[type=submit]:hover {
   }
 
   .team-member-info{
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 
   }
 
@@ -813,5 +884,17 @@ input[type=submit]:hover {
 
 .custom-shape-divider-bottom-1706346388 .shape-fill {
   fill:rgb(121 5 5 / 30%);
+
+}
+
+/* ==Contact== */
+
+.contact{
+  /* display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  align-items: center; */
+  background: linear-gradient(to bottom, rgba(79, 5, 5, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;;
+
 
 }

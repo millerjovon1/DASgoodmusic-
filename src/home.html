@@ -5,37 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
-
-
   <title>Home</title>
 </head>
+
 <body>
   <nav class="nav-bar">
     <div class="logo">
-      <img src="./images/das_globe_logo.png" alt="Logo">
+      <a href="./home.html">
+        <img src="./images/das_globe_logo.png" alt="Logo">
+      </a>
     </div>
     <ul class="nav-menu">
       <li><a href="#">DA$ Catalogue</a></li>
       <li><a href="#">DA$ Studios.jp🇯🇵</a></li>
-      <li><a href="#">Label</a></li>
+      <li><a href="#label-nav">Label</a></li>
       <li><a href="#">DA$ Beat-Store</a></li>
-      <li><a href="#">DA$ Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="./services.html">DA$ Services</a></li>
+      <li><a href="#contact-nav">Contact</a></li>
     </ul>
   </nav>
       <div class="banner">
+        <div class="banner-wrapper">
+          <div class="banner-ads" id="banner-ads">
+
+          <div class="banner-pop-up" id="slide1">
+            <h3>Latest Releases</h3>
+            <img class="release-popup" src="./images/culmo_jackson.jpeg" alt="culmo-album-cover">
+            <p>Drill Joint - The Hilt</p>
+            <p class="listen-now">Listen Now</p>
+          </div>
+
+          <div class="banner-pop-up" id="slide2">
+            <h3>Latest Releases</h3>
+            <img class="release-popup" src="./images/drill_joint_cover.png" alt="culmo-album-cover">
+            <p>Drill Joint - The Hilt</p>
+            <p class="listen-now">Listen Now</p>
+          </div>
+        </div>
+
         <div class="home-banner-content">
           <div class="home-banner-logo">
             <img  class="dgm-img" src="./images/dasgoodmusic_logo2.png"  alt="DA$logo">
           </div>
             <div class="home-banner-text">
-            <h1>The world's most sophisticated production company.</h1>
+            <h1>The world's most sophisticated music production company.</h1>
             <!-- <h2>Keep the main thing the main thing! </h2> -->
               <p>Creating exceptional music with artists worldwide has been our commitment since 2020.
                 We remain dedicated to delivering sophisticated and globally recognized music.
                 We operate internationally with a presence in America, Tokyo, and Paris.</p>
               </div>
               <div class="explore-btn">Explore Catalogue</div>
+
+            </div>
           </div>
         </div>
 
@@ -138,7 +159,7 @@
         </div>
       </div>
 
-    <div class="das-artist-section">
+    <div class="das-artist-section" id="label-nav">
       <div class="artist-section-header">
         <div class="artist-header-text">
           <h2>Label</h2>
@@ -311,13 +332,14 @@
               </div>
 
 
-              <div class="about">
+              <div class="about" id="contact-nav">
                 <div class="das-bio">
                   <div class="dasteam-profile-card">
                     <img class="das-team-avatar" src="./images/jp.jpeg" alt="jp-profile-photo">
                     <div class="team-member-info">
                       <h3>J.P</h3>
                       <p>Co-Founder - Catalouge Management - Artist Developement</p>
+                      <p>popefam210@gmail.com</p>
                     </div>
                   </div>
 
@@ -326,6 +348,7 @@
                     <div class="team-member-info">
                       <h3>Monsiuer Jovoni</h3>
                       <p>Co-Founder- Lead Producer - Artist - Web Developer</p>
+                      <p>monsieurjovoni@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -336,7 +359,7 @@
                     apart in the entertainment industry."
                     <p>
                     </div>
-                    <div class="promotion-card-title">
+                    <div class="promotion-card-title" >
                       <h2>Why us?</h2>
                     </div>
                     <div class="promotion-card">
@@ -374,6 +397,86 @@
                         </svg>
                       </div>
                     </div>
+                    <footer>
+                      <div class="contact">
+                        <div class="contact-info">
+
+                          <h3>DA$goodent@gmail.com</h3>
+                        </div>
+                        <div class="social-media">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-twitter"></i>
+
+                        </div>
+
+                      </div>
+                    </footer>
                   </div>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                      const bannerAdsContainer = document.getElementById('banner-ads');
+                      if (bannerAdsContainer) {
+                        console.log('Banner container found:', bannerAdsContainer);
+                        initializeBannerAds(bannerAdsContainer);
+                      } else {
+                        console.error('Banner container not found!');
+                      }
+                    });
+
+                    function initializeBannerAds(container) {
+                      applyAnimation(container);
+                    }
+
+                    function applyAnimation(container) {
+                      if (!container.classList.contains('animation-applied')) {
+                        console.log('Applying animation...');
+                        container.classList.add('animation-applied');
+
+                        const slides = container.querySelectorAll('.banner-pop-up');
+                        slides.forEach((slide, index) => {
+                          slide.style.display = index === 0 ? 'block' : 'none';
+                        });
+
+                        container.style.animation = 'slideIn 1s ease-in-out';
+                        container.style.visibility = 'visible';
+                        container.style.opacity = '1';
+                        localStorage.setItem('animationApplied', 'true');
+
+                        // Start slideshow immediately after applying animation
+                        startSlideShow(container);
+                      }
+                    }
+
+                    function startSlideShow(container) {
+                      let currentSlide = 1;
+
+                      function showNextSlide() {
+                        nextSlide(container, currentSlide);
+                        currentSlide = (currentSlide % 2) + 1; // Toggle between 1 and 2
+                      }
+
+                      // Initial call to show the first slide
+                      showNextSlide();
+
+                      // Automatic slideshow with a 3-second interval
+                      setInterval(showNextSlide, 3000);
+                    }
+
+                    function nextSlide(container, slideIndex) {
+                      const slides = container.querySelectorAll('.banner-pop-up');
+                      slides.forEach(slide => {
+                        slide.style.display = 'none';
+                      });
+
+                      const currentSlide = container.querySelector(`#slide${slideIndex}`);
+                      if (currentSlide) {
+                        console.log('Showing slide:', currentSlide);
+                        currentSlide.style.display = 'block';
+                      } else {
+                        console.error('Slide not found:', slideIndex);
+                      }
+                    }
+                  </script>
                 </body>
                 </html>
