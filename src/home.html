@@ -422,6 +422,15 @@
                       } else {
                         console.error('Banner container not found!');
                       }
+
+                      // Add smooth scrolling to the "Contact" link
+                      const contactLink = document.querySelector('a[href="#contact-nav"]');
+                      if (contactLink) {
+                        contactLink.addEventListener('click', (event) => {
+                          event.preventDefault(); // Prevent the default behavior of the link
+                          scrollSmoothly('#contact-nav');
+                        });
+                      }
                     });
 
                     function initializeBannerAds(container) {
@@ -477,6 +486,15 @@
                         console.error('Slide not found:', slideIndex);
                       }
                     }
+
+                    // Function to scroll smoothly to a target element
+                    function scrollSmoothly(targetSelector) {
+                      const targetElement = document.querySelector(targetSelector);
+                      if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }
                   </script>
+
                 </body>
                 </html>

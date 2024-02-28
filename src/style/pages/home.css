@@ -9,14 +9,19 @@
 
 
 /* main-layout */
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
   padding: 0;
-  /* background:black; */
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  overflow-x: hidden;
   color: var(--main-color);
-  background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;;
+  background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;
 }
+
 
 
 
@@ -45,9 +50,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff; /* Choose your text color */
-  background: linear-gradient(rgba(136, 84, 21, 0.83), rgba(115, 197, 255, 0.79));
-  position: fixed;
+  color: black; /* Choose your text color */
+  background: linear-gradient(rgb(255 219 230 / 90%), rgb(255 181 79 / 53%));
+  /* position: fixed; */
   width: 100%;
   z-index: 1000;
   height: 90px;
@@ -67,6 +72,10 @@ body {
 
 .nav-menu li {
   margin-right: 20px;
+  margin-right: 20px;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: 250;
   font-family: 'Oswald', sans-serif;
 
 }
@@ -75,6 +84,9 @@ body {
   text-decoration: none;
   color: inherit;
   font-size: 18px;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: 250;
   padding: 8px; /* Increased padding for a larger clickable area */
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
@@ -135,6 +147,14 @@ a:hover {
 }
 
 /* ===Banner/Header=== */
+
+.banner-wrapper{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+
+}
 .banner {
   background-image: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%)),
   url(/src/images/banner_cover3.png);
@@ -148,6 +168,8 @@ a:hover {
 
 
 /* style/style.css */
+
+
  .banner-pop-up {
   text-align: center;
   background-color: beige;
@@ -190,13 +212,7 @@ a:hover {
 
 
 
-.banner-wrapper{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  align-items: center;
 
-}
 .home-banner-content{
   display: flex;
   flex-direction: column;
