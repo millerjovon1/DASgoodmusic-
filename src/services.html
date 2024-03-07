@@ -25,15 +25,107 @@
       <li><a href="#contact-nav">Contact</a></li>
     </ul>
   </nav>
+
   <div class="services-banner">
-    <h1>Services</h1>
+    <img src="/src/images/jsbland.jpeg" alt="jsb_banner" class="active">
+    <img src="/src/images/jsb_sot.jpeg" alt="jsb_banner">
+    <img src="/src/images/septeni_raptures.png" alt="septeni_banner">
+
+  </div>
+  <div id="services-page-heading">
+    <h1 id="page-title">Services</h1>
+    <img id="service-icon-1" src="./images/quality-service_1png" alt="">
+    <p>"DA$goodmusic, led by Monsieur Jovoni, are a group of music producers, artists, and creators,
+      delivering substantial value to brands and artists across Japan, America, and France."</p>
   </div>
   <div class="main-container-services">
-    <h2>Commerical Soundtracks: Music Tailored for Brands</h2>
-    <p>We're here to serve you</p>
-    <img id="monsieur-jovoni-avatar-2" src="./images/monsieurjovoni2.png" alt="monsieurjovoni-2">
-    <!-- Add your content here -->
+    <div class="service-title">
+      <h2>Commercial Soundtracks: Music Tailored for Brands</h2>
+    </div>
+    <div class="service-wrapper">
+      <div class="das-service-card">
+        <img class="das-globe-logo" src="/src/images/das_globe_logo.png" alt="das-globe-logo">
+          <p>How can we serve you?</p>
+          <div class="service-action-btn">
+            <h3>Work With DA$goodmusic</h3>
+          </div>
+        </div>
+        <div class="services-page-text">
+        </div>
+
+        <div class="service-type-info">
+          <ul>
+            <li><h3>Singing-Songwriting/Rapping</h3>
+              <em><p>Crafting original lyrics and delivering dynamic
+                vocals to elevate your brand's identity.
+              </p>
+              </em>
+            </li>
+
+            <li><h3>Sync Licencing</h3>
+              <em>
+                <p>
+                  Discover curated tracks from our Catalogue or collaborate with DA$goodmusic
+                  to create a bespoke song for your brand's unique narrative.
+              </p>
+              </em>
+
+            </li>
+            <li><h3>Music Production</h3>
+            <em>
+              <p>
+                Transforming concepts into captivating soundscapes, our music
+                production enhances brand experiences with tailor-made compositions.
+              </p>
+            </em>
+            </li>
+             <li><h3>Voice-Narration</h3>
+              <em>
+                <p>
+                  Captivate your audience with compelling storytelling – our voice narration services
+                  add a distinctive and engaging touch to your brand content.
+                </p>
+              </em>
+             </li>
+          </ul>
+
+
+
+        </div>
+
+
+
+    </div>
+    <div class="services-page i">
+      <!-- Add your content here -->
+    </div>
   </div>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.services-banner img');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Automatic slideshow with a 3-second interval (adjust as needed)
+    setInterval(nextSlide, 3000);
+
+    // Show the initial slide
+    showSlide(currentSlide);
+  </script>
+
 </body>
 
 </html>
