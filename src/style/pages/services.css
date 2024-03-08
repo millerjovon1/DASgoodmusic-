@@ -199,15 +199,16 @@ a:hover {
   margin: 0 auto; /* Center the container horizontally */
   text-align: center;
   /* background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100; */
-
 }
 
+
+/* ==Brand--Services== */
 .service-wrapper{
   width: 100%;
   display:flex;
   background: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%));
-
 }
+
 .das-service-card{
   display: flex;
   flex-direction: column;
@@ -225,10 +226,10 @@ a:hover {
 }
 .service-type-info{
   width: 100%;
-
   li{
     list-style: none;
     text-decoration: none;
+    border-bottom: 1px solid white;
 
   }
 }
@@ -241,7 +242,6 @@ a:hover {
 
 .service-action-btn h3{
   font-family: 'Royal Acidbath', sans-serif;
-
 
 }
 
@@ -262,8 +262,6 @@ a:hover {
 
 
 
-
-
 #monsieur-jovoni-avatar-2{
   width: 60px;
   border-radius: 50%;
@@ -273,7 +271,85 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  flex-direction: column
+/* ==Artist Services== */
+.service-wrapper-vertical
+{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%));
+}
+#artist-info-section {
+  border:1px solid white;
+}
 
+#border-right-none{
+  border-right:none
+
+}
+
+#mixer{
+  width:100%
+}
+
+/* ==Tech Services== */
+#sass{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#web-dev-img{
+  width: 400px;
+}
+#web-dev-info.service-type-info
+{
+  width: 50%;
+}
+
+#tech{
+  width: 300px;
+}
+#tech-bag{
+  width: 300px;
+}
+
+
+/* ==Pricing== */
+
+#price-section, .service-wrapper-vertical
+
+{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content:center ;
+  align-items: center;
+  /* background: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%)); */
+
+}
+
+.artist-services-img{
+  max-width: 1200px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+}
+
+
+#pricing{
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  justify-content: start;
+  align-items: center;
+  height: 400px;
+  margin: 8%;
 }
