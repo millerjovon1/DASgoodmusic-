@@ -215,13 +215,14 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-right: 1px solid white;
+  width: 400px;
 
 }
 
 .service-title h2{
   font-family: 'Royal Acidbath', sans-serif;
 
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
 
 }
 .service-type-info{
@@ -239,6 +240,7 @@ a:hover {
   width: 400px;
   border-radius:8px;
 }
+
 
 .service-action-btn h3{
   font-family: 'Royal Acidbath', sans-serif;
@@ -279,59 +281,93 @@ a:hover {
   width: 100%;
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   background: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%));
 }
 #artist-info-section {
   border:1px solid white;
+  text-align: left;
+  width: 700px;
+  display: flex;
+  align-items: start;
+  margin: 4%;
+  padding: 2%;
 }
-
-#border-right-none{
+.button-margin{
+  width: 300px;
+}
+.artist-action-card{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.border-right-none{
   border-right:none
 
 }
 
 #mixer{
-  width:100%
-}
+  width: 1200px;
+  height: 360px;
+  object-fit: cover;
+  filter: grayscale(90%) brightness(90%) contrast(100%) sepia(360%)}
 
 /* ==Tech Services== */
-#sass{
+  #saas{
+  max-width: 1200px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
 }
 
 #web-dev-img{
-  width: 400px;
+  width: 360px;
 }
-#web-dev-info.service-type-info
-{
-  width: 50%;
+#web-dev-info.service-type-info {
+
+  width: 60%;
 }
 
 #tech{
-  width: 300px;
+  width: 400px;
 }
-#tech-bag{
-  width: 300px;
+
+#web-dev-portfolio{
+  /* width: 200px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+#lp-template{
+  width: 220px;
+  border-radius: 4px;
+}
+#flip-it-temp{
+  width: 160px;
+  border-radius: 4px;
+}
+.quote-action-btn{
+  width: 200px;
+  border-radius:8px;
+  background: linear-gradient(to bottom, #3498db 0%, #3498db 50%, #1f4788 100%);
+  h3{
+    font-family: 'Royal Acidbath', sans-serif;
+
+  }
 }
 
 
 /* ==Pricing== */
 
-#price-section, .service-wrapper-vertical
 
-{
-  width: 100%;
-  display:flex;
-  flex-direction: column;
-  justify-content:center ;
-  align-items: center;
-  /* background: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%)); */
 
-}
 
 .artist-services-img{
   max-width: 1200px;
@@ -339,7 +375,12 @@ a:hover {
   /* align-items: center; */
   justify-content: space-evenly;
 }
-
+#pricing-contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 #pricing{
   border-top: 1px solid white;
@@ -347,9 +388,69 @@ a:hover {
   text-align: left;
   display: flex;
   flex-direction: column;
-  width: 600px;
-  justify-content: start;
+  width: 400px;
+  /* justify-content: start; */
   align-items: center;
-  height: 400px;
-  margin: 8%;
+  /* margin: 4%; */
+}
+.pricing-info{
+  display: flex;
+  flex-direction: column;
+
+}
+.pricing-service-info{
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* ==Pricing Contact Form== */
+.contact-form {
+  max-width: 800px;
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: #333; /* Adjust text color */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555; /* Adjust label color */
+}
+
+input,
+select,
+textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50; /* Change to your preferred color */
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049; /* Change to your preferred hover color */
 }
