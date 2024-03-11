@@ -353,15 +353,31 @@ a:hover {
   width: 160px;
   border-radius: 4px;
 }
-.quote-action-btn{
+.quote-action-btn {
+  position: relative;
   width: 200px;
-  border-radius:8px;
+  border-radius: 8px;
   background: linear-gradient(to bottom, #3498db 0%, #3498db 50%, #1f4788 100%);
-  h3{
-    font-family: 'Royal Acidbath', sans-serif;
-
-  }
 }
+
+/* Apply the greying out effect on hover */
+.quote-action-btn:hover {
+  filter: grayscale(70%); /* Adjust the percentage based on your preference */
+  transition: filter 0.3s ease-in-out;
+  color: #ff9900; /* Smooth transition for the greying out effect */
+}
+
+.quote-action-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Rest of your existing styles for h3 and other elements */
+.quote-action-btn h3 {
+  font-family: 'Royal Acidbath', sans-serif;
+  /* Add any additional styles for the normal state */
+}
+
 
 
 /* ==Pricing== */
@@ -380,6 +396,8 @@ a:hover {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  margin: 4%;
+
 }
 
 #pricing{
@@ -388,7 +406,7 @@ a:hover {
   text-align: left;
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 500px;
   /* justify-content: start; */
   align-items: center;
   /* margin: 4%; */
