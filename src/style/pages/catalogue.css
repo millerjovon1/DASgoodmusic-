@@ -1,0 +1,165 @@
+/* ==fonts== */
+@import url('https://fonts.cdnfonts.com/css/royal-acidbath');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed');
+@import url('https://fonts.cdnfonts.com/css/roboto-condensed');
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: var(--main-color);
+  background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;
+}
+
+
+
+/* == Buttons == */
+
+.explore-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  font-family: 'Royal Acidbath', sans-serif;
+}
+
+
+
+/* == Nav Bar == */
+
+
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black; /* Choose your text color */
+  background: linear-gradient(rgb(255 219 230 / 90%), rgb(255 181 79 / 53%));
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 90px;
+
+}
+
+.logo img {
+  max-height: 80px;
+  margin-left: 112px; /* Adjust the max height based on your logo size preference */
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  margin-right: 112px;
+}
+
+.nav-menu li {
+  margin-right: 20px;
+  margin-right: 20px;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: 250;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  margin-bottom: 1em;
+  font-size: 1em;
+  font-weight: 250;
+  padding: 8px; /* Increased padding for a larger clickable area */
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nav-menu a:hover {
+  text-decoration: none;
+  background-color: #ff9900; /* Change to your preferred hover color */
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+}
+/* == Fonts == */
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  font-family: 'Royal Acidbath', sans-serif;
+}
+
+h2 {
+  font-size: 1.7em; /* Adjusted font size */
+  margin-bottom: 0.5em;
+  font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+  font-size: 1.5em; /* Adjusted font size */
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+p {
+  margin-bottom: 1em;
+  font-size: 1em; /* Adjust the value based on your preference */
+  font-family: 'Proxima Nova Condensed', sans-serif;
+  font-weight: 200;
+}
+
+a {
+
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* == logo == */
+.das-globe-logo{
+  /* background: red; */
+  width: 200px;
+  border-radius: 40%;
+  padding: 2%;
+}
+
+.main-container-catalogue{
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  /* background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100; */
+}
+
+.under-construction{
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(234, 212, 212);
+  width: 600px;
+  height: 600px;
+  border-radius:8px;
+  color:black;
+}

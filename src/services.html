@@ -17,12 +17,12 @@
       </a>
     </div>
     <ul class="nav-menu">
-      <li><a href="#">DA$ Catalogue</a></li>
-      <li><a href="#">DA$ Studios.jp🇯🇵</a></li>
-      <li><a href="#label-nav">Label</a></li>
-      <li><a href="#">DA$ Beat-Store</a></li>
+      <li><a href="./catalogue.html">DA$ Catalogue</a></li>
+      <li><a href="./dasgoodsudios.html">DA$ Studios.jp🇯🇵</a></li>
+      <li><a href="./home.html#label-nav">Label</a></li>
+      <li><a href="./beatstore.html">DA$ Beat-Store</a></li>
       <li><a href="./services.html">DA$ Services</a></li>
-      <li><a href="#contact-nav">Contact</a></li>
+      <li><a href="./home.html#contact-nav">Contact</a></li>
     </ul>
   </nav>
 
@@ -240,15 +240,16 @@
 
               <div class="contact-form">
                 <h2>Contact Us for a Quote</h2>
-                <form action="submit_form.php" method="post">
+                <form action="https://formspree.io/f/xdoqdvdl"
+                method="POST">
                   <label for="clientType">Are you a company or an artist? please select an option below</label>
                   <select id="clientType" name="projectType" required>
                     <option value="band">Label/Company</option>
                     <option value="Artist">artist</option>
                   </select>
-                  <label for="name"> Name:</label>
+                  <label for="name" required> Name:</label>
                   <input type="text" id="name" name="name" placeholder="Label Name/Arist Name.." required>
-                  <label for="email">Your Email:</label>
+                  <label for="email" required>Your Email:</label>
                   <input type="email" id="email" name="email" required>
 
                   <label for="projectType">Project Type:</label>

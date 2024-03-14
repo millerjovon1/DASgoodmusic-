@@ -131,7 +131,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* == logo == */
@@ -362,6 +362,7 @@ a:hover {
 
 /* Apply the greying out effect on hover */
 .quote-action-btn:hover {
+  text-decoration: none;
   filter: grayscale(70%); /* Adjust the percentage based on your preference */
   transition: filter 0.3s ease-in-out;
   color: #ff9900; /* Smooth transition for the greying out effect */
