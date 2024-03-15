@@ -15,7 +15,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   color: var(--main-color);
   background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;
 }
@@ -94,6 +94,72 @@ body {
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
 }
+.menu-toggle {
+  display: none; /* Hide by default */
+}
+
+@media screen and (max-width: 1024px) {
+  /* Styles for tablets */
+  body {
+    font-size: 14px; /* Example: Adjust font size for better readability on tablets */
+  }
+
+  .nav-menu {
+    display: none; /* Hide the navigation menu by default on tablets */
+  }
+
+  .nav-toggle {
+    display: block; /* Display the toggle button on tablets */
+  }
+
+  .nav-toggle .fas {
+    font-size: 1.5rem; /* Example: Adjust icon size for better visibility on tablets */
+  }
+
+  .nav-menu.active {
+    display: flex; /* Display the navigation menu when the toggle button is clicked on tablets */
+    flex-direction: column; /* Arrange menu items vertically */
+    position: absolute; /* Position the menu absolutely */
+    top: 90px; /* Adjust the top position based on your header height */
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Example: Change background color of the menu */
+    padding: 20px; /* Example: Add padding for better spacing */
+    border: 1px solid #ccc; /* Example: Add border for better visibility */
+    border-top: none; /* Example: Remove top border to merge with the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Example: Add box shadow for a subtle effect */
+  }
+
+  .nav-menu li {
+    margin: 10px 0; /* Example: Adjust margin between menu items for better spacing */
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem; /* Example: Adjust font size for better readability */
+  }
+}
+
+/* Styles for smartphones */
+@media screen and (max-width: 480px) {
+  /* Styles for smartphones */
+  body {
+    font-size: 12px; /* Example: Adjust font size for better readability on smartphones */
+  }
+
+  .nav-toggle .fas {
+    font-size: 1.3rem; /* Example: Adjust icon size for better visibility on smartphones */
+  }
+
+  .nav-menu.active {
+    top: 80px; /* Adjust the top position based on your header height */
+    padding: 15px; /* Example: Adjust padding for better spacing */
+  }
+
+  .nav-menu a {
+    font-size: 1.1rem; /* Example: Adjust font size for better readability */
+  }
+}
+
 /* == Fonts == */
 
 h1 {

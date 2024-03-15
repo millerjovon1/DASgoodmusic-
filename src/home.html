@@ -15,6 +15,9 @@
         <img src="./images/das_globe_logo.png" alt="Logo">
       </a>
     </div>
+    <div class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
     <ul class="nav-menu">
       <li><a href="./catalogue.html">DA$ Catalogue</a></li>
       <li><a href="./dasgoodsudios.html">DA$ Studios.jp🇯🇵</a></li>
@@ -490,22 +493,31 @@
                       }
                     }
                     document.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('contact-form');
+                    const form = document.getElementById('contact-form');
 
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
+                    form.addEventListener('submit', function (event) {
+                        event.preventDefault();
 
-            // Validate the form
-            if (form.checkValidity()) {
-                // Form is valid, proceed with sending the email or handling the submission
-                // Here you can add your code to send the form data or integrate with an API
-                console.log('Form is valid. Proceeding with submission...');
-            } else {
-                // Form is invalid, you can add code here to display error messages or handle invalid input
-                console.log('Form is invalid. Please fill in all required fields.');
-            }
-        });
-    });
+                        // Validate the form
+                        if (form.checkValidity()) {
+                            // Form is valid, proceed with sending the email or handling the submission
+                            // Here you can add your code to send the form data or integrate with an API
+                            console.log('Form is valid. Proceeding with submission...');
+                        } else {
+                            // Form is invalid, you can add code here to display error messages or handle invalid input
+                            console.log('Form is invalid. Please fill in all required fields.');
+                        }
+                    });
+                });
+                document.addEventListener('DOMContentLoaded', () => {
+              const menuToggle = document.querySelector('.nav-toggle');
+              const navMenu = document.querySelector('.nav-menu');
+
+              // Toggle the active class on click
+              menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+              });
+            });
                   </script>
 
                 </body>
