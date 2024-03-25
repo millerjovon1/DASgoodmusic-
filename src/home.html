@@ -15,9 +15,10 @@
         <img src="./images/das_globe_logo.png" alt="Logo">
       </a>
     </div>
-    <div class="nav-toggle">
-      <i class="fas fa-bars"></i>
-    </div>
+     <div class="nav-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="nav-menu-container">
     <ul class="nav-menu">
       <li><a href="./catalogue.html">DA$ Catalogue</a></li>
       <li><a href="./dasgoodsudios.html">DA$ Studios.jp🇯🇵</a></li>
@@ -26,6 +27,7 @@
       <li><a href="./services.html">DA$ Services</a></li>
       <li><a href="#contact-nav">Contact</a></li>
     </ul>
+  </div>
   </nav>
       <div class="banner">
         <div class="banner-wrapper">
@@ -413,111 +415,114 @@
                   </div>
                   <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                      const bannerAdsContainer = document.getElementById('banner-ads');
-                      if (bannerAdsContainer) {
-                        console.log('Banner container found:', bannerAdsContainer);
-                        initializeBannerAds(bannerAdsContainer);
-                      } else {
-                        console.error('Banner container not found!');
-                      }
+    const bannerAdsContainer = document.getElementById('banner-ads');
+    if (bannerAdsContainer) {
+        console.log('Banner container found:', bannerAdsContainer);
+        initializeBannerAds(bannerAdsContainer);
+    } else {
+        console.error('Banner container not found!');
+    }
 
-                      // Add smooth scrolling to the "Contact" link
-                      const contactLink = document.querySelector('a[href="#contact-nav"]');
-                      if (contactLink) {
-                        contactLink.addEventListener('click', (event) => {
-                          event.preventDefault(); // Prevent the default behavior of the link
-                          scrollSmoothly('#contact-nav');
-                        });
-                      }
-                    });
+    // Add smooth scrolling to the "Contact" link
+    const contactLink = document.querySelector('a[href="#contact-nav"]');
+    if (contactLink) {
+        contactLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent the default behavior of the link
+            scrollSmoothly('#contact-nav');
+        });
+    }
 
-                    function initializeBannerAds(container) {
-                      applyAnimation(container);
-                    }
+    // Toggle navigation menu
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu-container');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
+});
 
-                    function applyAnimation(container) {
-                      if (!container.classList.contains('animation-applied')) {
-                        console.log('Applying animation...');
-                        container.classList.add('animation-applied');
+function initializeBannerAds(container) {
+    applyAnimation(container);
+}
 
-                        const slides = container.querySelectorAll('.banner-pop-up');
-                        slides.forEach((slide, index) => {
-                          slide.style.display = index === 0 ? 'block' : 'none';
-                        });
+function applyAnimation(container) {
+    if (!container.classList.contains('animation-applied')) {
+        console.log('Applying animation...');
+        container.classList.add('animation-applied');
 
-                        container.style.animation = 'slideIn 1s ease-in-out';
-                        container.style.visibility = 'visible';
-                        container.style.opacity = '1';
-                        localStorage.setItem('animationApplied', 'true');
+        const slides = container.querySelectorAll('.banner-pop-up');
+        slides.forEach((slide, index) => {
+            slide.style.display = index === 0 ? 'block' : 'none';
+        });
 
-                        // Start slideshow immediately after applying animation
-                        startSlideShow(container);
-                      }
-                    }
+        container.style.animation = 'slideIn 1s ease-in-out';
+        container.style.visibility = 'visible';
+        container.style.opacity = '1';
+        localStorage.setItem('animationApplied', 'true');
 
-                    function startSlideShow(container) {
-                      let currentSlide = 1;
+        // Start slideshow immediately after applying animation
+        startSlideShow(container);
+    }
+}
 
-                      function showNextSlide() {
-                        nextSlide(container, currentSlide);
-                        currentSlide = (currentSlide % 2) + 1; // Toggle between 1 and 2
-                      }
+function startSlideShow(container) {
+    let currentSlide = 1;
 
-                      // Initial call to show the first slide
-                      showNextSlide();
+    function showNextSlide() {
+        nextSlide(container, currentSlide);
+        currentSlide = (currentSlide % 2) + 1; // Toggle between 1 and 2
+    }
 
-                      // Automatic slideshow with a 3-second interval
-                      setInterval(showNextSlide, 3000);
-                    }
+    // Initial call to show the first slide
+    showNextSlide();
 
-                    function nextSlide(container, slideIndex) {
-                      const slides = container.querySelectorAll('.banner-pop-up');
-                      slides.forEach(slide => {
-                        slide.style.display = 'none';
-                      });
+    // Automatic slideshow with a 3-second interval
+    setInterval(showNextSlide, 3000);
+}
 
-                      const currentSlide = container.querySelector(`#slide${slideIndex}`);
-                      if (currentSlide) {
-                        console.log('Showing slide:', currentSlide);
-                        currentSlide.style.display = 'block';
-                      } else {
-                        console.error('Slide not found:', slideIndex);
-                      }
-                    }
+function nextSlide(container, slideIndex) {
+    const slides = container.querySelectorAll('.banner-pop-up');
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
 
-                    // Function to scroll smoothly to a target element
-                    function scrollSmoothly(targetSelector) {
-                      const targetElement = document.querySelector(targetSelector);
-                      if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }
-                    document.addEventListener('DOMContentLoaded', () => {
-                    const form = document.getElementById('contact-form');
+    const currentSlide = container.querySelector(`#slide${slideIndex}`);
+    if (currentSlide) {
+        console.log('Showing slide:', currentSlide);
+        currentSlide.style.display = 'block';
+    } else {
+        console.error('Slide not found:', slideIndex);
+    }
+}
 
-                    form.addEventListener('submit', function (event) {
-                        event.preventDefault();
+// Function to scroll smoothly to a target element
+function scrollSmoothly(targetSelector) {
+    const targetElement = document.querySelector(targetSelector);
+    if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
-                        // Validate the form
-                        if (form.checkValidity()) {
-                            // Form is valid, proceed with sending the email or handling the submission
-                            // Here you can add your code to send the form data or integrate with an API
-                            console.log('Form is valid. Proceeding with submission...');
-                        } else {
-                            // Form is invalid, you can add code here to display error messages or handle invalid input
-                            console.log('Form is invalid. Please fill in all required fields.');
-                        }
-                    });
-                });
-                document.addEventListener('DOMContentLoaded', () => {
-              const menuToggle = document.querySelector('.nav-toggle');
-              const navMenu = document.querySelector('.nav-menu');
+// Form submission handling
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
 
-              // Toggle the active class on click
-              menuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-              });
-            });
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Validate the form
+        if (form.checkValidity()) {
+            // Form is valid, proceed with sending the email or handling the submission
+            // Here you can add your code to send the form data or integrate with an API
+            console.log('Form is valid. Proceeding with submission...');
+        } else {
+            // Form is invalid, you can add code here to display error messages or handle invalid input
+            console.log('Form is invalid. Please fill in all required fields.');
+        }
+    });
+});
+
                   </script>
 
                 </body>

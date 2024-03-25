@@ -9,35 +9,20 @@
 
 
 /* main-layout */
-@media screen and (max-width: 1024px) {
   /* Styles for tablets */
   html {
     scroll-behavior: smooth;
   }
 
   body {
+    width: 100%;
     margin: 0;
     padding: 0;
     color: var(--main-color);
     background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%);
-    /* overflow-x: hidden; Remove horizontal overflow */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  /* Styles for smartphones */
-  html {
-    scroll-behavior: smooth;
   }
 
-  body {
-    margin: 0;
-    padding: 0;
-    color: var(--main-color);
-    background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%);
-    /* overflow-x: hidden; Remove horizontal overflow */
-  }
-}
+
 
 
 
@@ -65,10 +50,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: black; /* Choose your text color */
+  color: black;
   background: linear-gradient(rgb(255 219 230 / 90%), rgb(255 181 79 / 53%));
-  /* position: fixed; */
-  width: 100%;
+  width: 100vw;
   z-index: 1000;
   height: 90px;
 
@@ -112,98 +96,12 @@
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
 }
+
 /* === NAVBAR Responsiveness=== */
-/* Styles for tablets and smartphones */
 
-.nav-toggle {
-  display: none; /* Hide by default */
-}
+/* Style for toggle button */
 
-@media screen and (max-width: 1024px) {
-  /* Styles for tablets */
-  body {
-    font-size: 14px; /* Example: Adjust font size for better readability on tablets */
-  }
 
-  .nav-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-menu {
-    display: none; /* Hide the navigation menu by default on tablets */
-  }
-
-  .nav-toggle {
-
-    display: block; /* Display the toggle button on tablets */
-  }
-
-  .nav-toggle .fas {
-     margin-right: 20px;
-    font-size: 2.0rem; /* Example: Adjust icon size for better visibility on tablets */
-  }
-
-  .nav-menu.active {
-    display: flex; /* Display the navigation menu when the toggle button is clicked on tablets */
-    flex-direction: column; /* Arrange menu items vertically */
-    position: absolute; /* Position the menu absolutely */
-    top: 90px; /* Adjust the top position based on your header height */
-    left: 0;
-    right: 0;
-    background-color: #fff; /* Example: Change background color of the menu */
-    padding: 20px; /* Example: Add padding for better spacing */
-    border: 1px solid #ccc; /* Example: Add border for better visibility */
-    border-top: none; /* Example: Remove top border to merge with the header */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Example: Add box shadow for a subtle effect */
-  }
-
-  .nav-menu li {
-    margin: 10px 0; /* Example: Adjust margin between menu items for better spacing */
-  }
-
-  .nav-menu a {
-    font-size: 1.2rem; /* Example: Adjust font size for better readability */
-  }
-  .logo img{
-    margin-left: 20px;
-
-  }
-}
-
-/* Styles for smartphones */
-@media screen and (max-width: 480px) {
-  /* Styles for smartphones */
-  body {
-    font-size: 12px; /* Example: Adjust font size for better readability on smartphones */
-  }
-  .nav-bar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-toggle .fas {
-    margin-right: 20px;
-    font-size: 2.0rem; /* Example: Adjust icon size for better visibility on smartphones */
-  }
-
-  .nav-menu.active {
-    top: 80px; /* Adjust the top position based on your header height */
-    padding: 15px; /* Example: Adjust padding for better spacing */
-  }
-
-  .nav-menu a {
-    font-size: 1.1rem; /* Example: Adjust font size for better readability */
-  }
-  .logo img{
-    margin-left: 20px;
-
-  }
-}
 
 /* == Fonts == */
 
@@ -246,6 +144,10 @@ a:hover {
   text-decoration: underline;
 }
 
+
+
+
+
 /* == logo == */
 .das-globe-logo{
   /* background: red; */
@@ -254,24 +156,33 @@ a:hover {
   padding: 2%;
 }
 
+
 /* ===Banner/Header=== */
 
-.banner-wrapper{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  align-items: center;
+  .banner {
+    width: 100%;
+    background-image: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%)), url(/src/images/banner_cover3.png);
+    height: auto; /* Adjusted to auto for responsiveness */
+    background-size: cover;
+    background-position: center;
+    padding: 15% 0; /* Adjusted padding for responsiveness */
+  }
 
-}
-.banner {
-  background-image: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%)),
-  url(/src/images/banner_cover3.png);
-  height: 360px;
-  background-size: cover;
-  background-position: center;
-  padding: 230px 0;
-  /* background: linear-gradient(to bottom, #ffbf42, #3f2412); */
-}
+  .banner-wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* Check if this is desired */
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* Add media queries as needed for responsiveness */
+  /* CSS for smartphone screens */
+
+
+
+  /* Add additional media queries and responsive styles as needed */
+
+
 
 
 
@@ -320,13 +231,13 @@ a:hover {
 
 
 
-
 .home-banner-content{
+  max-width: 800px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 800px;
 }
 
 
@@ -346,12 +257,40 @@ a:hover {
 .home-banner-text{
   text-align: left;
 }
+@media only screen and (max-width: 768px) {
+
+
+  .banner-wrapper {
+    flex-direction: column-reverse; /* Display banner-ads below the banner image */
+  }
+
+  .banner-pop-up {
+    display: block; /* Ensure banner pop-ups are visible on smaller screens */
+    /* Add any additional styles for smartphone screens */
+  }
+
+  /* Add any additional styles for smartphone screens */
+}
+
+/* Remove animation for smartphones */
+@media only screen and (max-width: 768px) {
+  @keyframes slideIn {
+    from {
+      margin-right: 0; /* Remove animation */
+    }
+    to {
+      margin-right: 0; /* Remove animation */
+    }
+  }
+}
+
+
+
 
 /* ==Main Container */
 
 .main-container-home{
-  width: 100%;
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto; /* Center the container horizontally */
   text-align: center;
 
@@ -400,16 +339,16 @@ a:hover {
   width: 100%;
   /* background: linear-gradient(to bottom, #ffbf42, #3f2412); */
 
+}
 
-  .das-client-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 12px;
-    padding: 12px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-  }
+.das-client-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 12px;
+  padding: 12px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
   .client-header-text{
@@ -428,14 +367,9 @@ a:hover {
     margin: 0;
   }
 
-.client-card{
-  width: 100%;
-
-}
 
 .client-service-section{
   /* background-color: black; */
-  max-width: 100%;
   display: flex;
   justify-content: space-evenly;
   padding-bottom:6%;
@@ -464,7 +398,6 @@ a:hover {
 }
 
 .client-services-pill{
-  max-width: 100%;
   margin-top: 0px;
   margin-bottom: -40px;
 }
@@ -500,7 +433,6 @@ a:hover {
 }
 
   .r-curve-background {
-    width: 100%;
     background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;;
     box-shadow: 0 10px 30px rgba(167, 155, 155, 0.1);
     border-top-right-radius: 16px;
@@ -721,7 +653,6 @@ a:hover {
   }
 
   .pub-logos{
-    width: 500px;
 
 
     .rsm-logo{
