@@ -10,17 +10,38 @@
 
 /* main-layout */
   /* Styles for tablets */
-  html {
-    scroll-behavior: smooth;
-  }
 
+/* Default styles for body */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--main-color);
+  background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: var(--main-color);
-    background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%);
+    font-size: 15px; /* Decrease font size for tablets */
+    padding: 15px; /* Adjust padding for tablets */
   }
+}
+
+/* Media query for laptops and desktops */
+
+/* Media query for smartphones */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px; /* Decrease font size for smartphones */
+    padding: 10px; /* Adjust padding for smartphones */
+  }
+}
+
 
 
 
@@ -97,6 +118,47 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
 }
 
+.nav-toggle {
+  display: none; /* Initially hidden on larger screens */
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-menu-container {
+    display: none; /* Hide menu items by default for tablets */
+  }
+  .nav-toggle {
+    display: block; /* Display the toggle button */
+    cursor: pointer;
+    padding: 20px;
+    margin-right: 20px; /* Adjust margin for better alignment on tablets */
+  }
+}
+
+/* Media query for laptops and desktops */
+@media only screen and (min-width: 1025px) {
+  .nav-menu-container {
+    display: flex; /* Show menu items by default for laptops and desktops */
+  }
+}
+
+/* Media query for smartphones */
+@media only screen and (max-width: 767px) {
+  .nav-menu-container.active {
+    display: flex; /* Show menu items when toggle is active for smartphones */
+    flex-direction: column; /* Display menu items in a column for smartphones */
+    margin: 20px 0; /* Adjust margin for better alignment on smartphones */
+  }
+  .nav-menu {
+    margin-right: 0; /* Remove right margin for menu items on smartphones */
+  }
+  .nav-toggle {
+    display: block; /* Display the toggle button */
+    cursor: pointer;
+    padding: 20px;
+    margin-right: 20px; /* Adjust margin for better alignment on smartphones */
+  }
+}
 /* === NAVBAR Responsiveness=== */
 
 /* Style for toggle button */
@@ -258,18 +320,23 @@ a:hover {
   text-align: left;
 }
 @media only screen and (max-width: 768px) {
+  .banner{
+   flex: 1;
+
+  }
 
 
   .banner-wrapper {
-    flex-direction: column-reverse; /* Display banner-ads below the banner image */
+    display: block;
   }
 
   .banner-pop-up {
-    display: block; /* Ensure banner pop-ups are visible on smaller screens */
-    /* Add any additional styles for smartphone screens */
-  }
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 300px; /* Set a maximum width if needed */
+    margin: 0 auto;
 
   /* Add any additional styles for smartphone screens */
+}
 }
 
 /* Remove animation for smartphones */

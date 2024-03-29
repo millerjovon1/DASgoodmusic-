@@ -13,13 +13,36 @@ html {
 }
 
 body {
-  width: 100%;
   margin: 0;
   padding: 0;
   /* overflow-x: hidden; */
   color: var(--main-color);
   background: linear-gradient(to bottom, rgb(121 5 5 / 30%) 0%, rgba(0, 0, 0, 0.9) 100%), #050100;
 }
+/* Default styles for body */
+/* Default styles for body */
+
+
+
+
+/* Media query for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px; /* Decrease font size for tablets */
+    padding: 15px; /* Adjust padding for tablets */
+  }
+}
+
+
+
+/* Media query for smartphones */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px; /* Decrease font size for smartphones */
+    padding: 10px; /* Adjust padding for smartphones */
+  }
+}
+
 
 
 
@@ -101,6 +124,42 @@ body {
 }
 
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-menu-container {
+    display: none; /* Hide menu items by default for tablets */
+  }
+  .nav-toggle {
+    display: block; /* Display the toggle button */
+    cursor: pointer;
+    padding: 20px;
+    margin-right: 20px; /* Adjust margin for better alignment on tablets */
+  }
+}
+
+/* Media query for laptops and desktops */
+@media only screen and (min-width: 1025px) {
+  .nav-menu-container {
+    display: flex; /* Show menu items by default for laptops and desktops */
+  }
+}
+
+/* Media query for smartphones */
+@media only screen and (max-width: 767px) {
+  .nav-menu-container.active {
+    display: flex; /* Show menu items when toggle is active for smartphones */
+    flex-direction: column; /* Display menu items in a column for smartphones */
+    margin: 20px 0; /* Adjust margin for better alignment on smartphones */
+  }
+  .nav-menu {
+    margin-right: 0; /* Remove right margin for menu items on smartphones */
+  }
+  .nav-toggle {
+    display: block; /* Display the toggle button */
+    cursor: pointer;
+    padding: 20px;
+    margin-right: 20px; /* Adjust margin for better alignment on smartphones */
+  }
+}
 /* Style for toggle button */
 
 
@@ -154,7 +213,7 @@ a:hover {
 
 /* ==Banner-Services== */
 
-.services-banner {
+.services-container {
   height: 400px;
   display: flex;
   align-items: center;
@@ -164,36 +223,29 @@ a:hover {
   position: relative;
   overflow: hidden;
   background: linear-gradient(rgb(10 9 7 / 90%), rgb(249 179 18 / 81%));
+  background-size: cover;
+  background-position: center;
 }
 
-.services-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+.services-container:nth-child(1) {
+  background-image: url('/src/images/jsbland.jpeg');
+}
+
+.services-container:nth-child(2) {
+  background-image: url('/src/images/jsb_sot.jpeg');
+}
+
+.services-container:nth-child(3) {
+  background-image: url('/src/images/septeni_raptures.png');
+}
+
+.services-container img {
+  display: none; /* Hide the img elements */
 }
 
 .services-banner img.active {
   opacity: 1;
 }
-
-.services-banner img:nth-child(1) {
-   background-image: url('/src/images/jsbland.jpeg');
-}
-
-.services-banner img:nth-child(2) {
-  background-image: url('/src/images/jsb_sot.jpeg');
-}
-
-.services-banner img:nth-child(3) {
-  background-image: url('/src/images/septeni_raptures.png');
-}
-
-/* Add more images as needed */
 
 
 
@@ -205,6 +257,7 @@ a:hover {
 
 .main-container-services{
   width: 1200px;
+
 
   margin: 0 auto; /* Center the container horizontally */
   text-align: center;
